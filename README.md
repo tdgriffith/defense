@@ -1,4 +1,4 @@
-# prelims
+# Defense repo
 Slides for oral portion of my defense. 
 
 https://tdgriffith.github.io/defense/
