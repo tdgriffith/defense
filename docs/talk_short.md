@@ -3,7 +3,7 @@
 # A Modal Approach to the Space Time Dynamics of Cognitive Biomarkers 
 
 ## T. Griffith
-#### Defense short
+#### Defense briefing
 
 #### March 17, 2022
 
@@ -156,7 +156,8 @@ y_m=C x_m
 $\begin{aligned}
     O&=\begin{bmatrix}
     C \\\ CA \\\ CA^2 \\\ \vdots \\\ CA^{s-1}
-    \end{bmatrix} X_0
+    \end{bmatrix} X_0 \\\
+    &= \Gamma X_0
 \end{aligned}$
 <br><br>
 $\begin{aligned}
@@ -216,7 +217,8 @@ y_m=C x_m
 $\begin{aligned}
     O&=\begin{bmatrix}
     C \\\ CA \\\ CA^2 \\\ \vdots \\\ CA^{s-1}
-    \end{bmatrix} X_0
+    \end{bmatrix} X_0 \\\
+    &= \Gamma X_0
 \end{aligned}$
 <br><br>
 $\begin{aligned}
