@@ -19,7 +19,7 @@
 ### 5. Adaptive Unknown Input Estimators
 ### 6. Reconstructing the Brain Wave Unknown Input
 ### 7. On the Observability of Matrix-Vector Dynamical Systems
-### 8. Conclusions 
+### ~~ 8. Conclusions ~~
 
 
 ---
@@ -430,7 +430,7 @@ $\begin{aligned}
 
 <section>
 
-<h1> Quantum Observability </h1>
+<h1> <del> Quantum Observability </del> </h1>
 <style>
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
