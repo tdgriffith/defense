@@ -338,6 +338,379 @@ accepting the uncertainty in $A_m$.
 
 ---
 
+<!-- .slide: data-background="#ffffff" class="light" -->
+<section>
+
+<h1> System Identification of Brain Wave Modes Using EEG </h1>
+<h2> Identifying linear patterns </h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+Identify the plant: 
+  $\begin{aligned}
+    \begin{cases}
+\dot{x}_m=A_m x +v_x\\\
+y_m=C x_m 
+\end{cases}
+  \end{aligned}$
+  <br><br>
+  <h3> Considered algorithms </h3>
+ <ul>
+  <li>OMA</li>
+  <li>NeXT-ERA</li>
+  <li>n4sid</li>
+  <li><strong><em>DMD</em></strong></li>
+</ul> 
+</div>
+
+<div class="col">
+<figure>
+  <img src="img/defense/modal_out.png" alt="Trulli" height="800">
+</figure>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h1> System Identification of Brain Wave Modes Using EEG </h1>
+<h2> Identifying linear patterns </h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+Identify the plant: 
+  $\begin{aligned}
+    \begin{cases}
+\dot{x}_m=A_m x +v_x\\\
+y_m=C x_m 
+\end{cases}
+  \end{aligned}$
+<br><br>
+$\begin{aligned}
+    O&=\begin{bmatrix}
+    C \\\ CA_m \\\ CA_m^2 \\\ \vdots \\\ CA_m^{s-1}
+    \end{bmatrix} X_0 \\\
+    &= \Gamma X_0
+\end{aligned}$
+<br><br>
+$\begin{aligned}
+    \hat{\Gamma}=US^{1/2}\\
+    \hat{X}_0=S^{1/2}V^*
+\end{aligned}$
+</div>
+
+
+
+<div class="col">
+<figure>
+  <img src="img/defense/max_order.jpg" alt="Trulli" height="600">
+</figure>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h1> System Identification of Brain Wave Modes Using EEG </h1>
+<h2> Identifying linear patterns </h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+Identify the plant: 
+  $\begin{aligned}
+    \begin{cases}
+\dot{x}_m=A_m x +v_x\\\
+y_m=C x_m 
+\end{cases}
+  \end{aligned}$
+<br><br>
+$\begin{aligned}
+    O&=\begin{bmatrix}
+    C \\\ CA_m \\\ CA_m^2 \\\ \vdots \\\ CA_m^{s-1}
+    \end{bmatrix} X_0 \\\
+    &= \Gamma X_0
+\end{aligned}$
+<br><br>
+$\begin{aligned}
+    \hat{\Gamma}=US^{1/2}\\
+    \hat{X}_0=S^{1/2}V^*
+\end{aligned}$
+</div>
+
+
+
+<div class="col">
+<figure>
+  <img src="img/defense/truncate_ex.png" alt="Trulli" height="500">
+</figure>
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h1> System Identification of Brain Wave Modes Using EEG </h1>
+<h2> Identifying linear patterns </h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+Identify the plant: 
+  $\begin{aligned}
+    \begin{cases}
+\dot{x}_m=A_m x \\\
+y_m=C x_m
+\end{cases}
+  \end{aligned}$
+<br><br>
+$\begin{aligned}
+    O&=\begin{bmatrix}
+    C \\\ CA \\\ CA^2 \\\ \vdots \\\ CA^{s-1}
+    \end{bmatrix} X_0 \\\
+    &= \Gamma X_0
+\end{aligned}$
+<br><br>
+$\begin{aligned}
+    \hat{\Gamma}=US^{1/2}\\
+    \hat{X}_0=S^{1/2}V^*
+\end{aligned}$
+</div>
+
+
+
+<div class="col">
+
+<figure>
+  <img src="img/defense/superposemodes.gif" alt="Trulli" height="600">
+</figure>
+
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h1> System Identification of Brain Wave Modes Using EEG </h1>
+<h2> Identifying linear patterns </h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+Identify the plant: 
+  $\begin{aligned}
+    \begin{cases}
+\dot{x}_m=A_m x \\\
+y_m=C x_m
+\end{cases}
+  \end{aligned}$
+<br><br>
+$\begin{aligned}
+    O&=\begin{bmatrix}
+    C \\\ CA \\\ CA^2 \\\ \vdots \\\ CA^{s-1}
+    \end{bmatrix} X_0 \\\
+    &= \Gamma X_0
+\end{aligned}$
+<br><br>
+$\begin{aligned}
+    \hat{\Gamma}=U S^{1/2}\\
+    \hat{X}_0=S^{1/2}V^*
+\end{aligned}$
+</div>
+
+
+
+<div class="col">
+
+<figure>
+  <img src="img/defense/braingif/comb_tot.gif" alt="Trulli"  style="border:0px;margin:0px;float:left;width:800px;">
+  <img src="img/defense/braingif/modes2.png" alt="Trulli" style="border:0px;margin:0px;float:left;width:800px;">
+</figure>
+
+
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h1> System Identification of Brain Wave Modes Using EEG </h1>
+<h2> Identifying linear patterns </h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+Identify the plant: 
+  $\begin{aligned}
+    \begin{cases}
+\dot{x}_m=A_m x \\\
+y_m=C x_m
+\end{cases}
+  \end{aligned}$
+<br><br>
+$\begin{aligned}
+    O&=\begin{bmatrix}
+    C \\\ CA \\\ CA^2 \\\ \vdots \\\ CA^{s-1}
+    \end{bmatrix} X_0 \\\
+    &= \Gamma X_0
+\end{aligned}$
+<br><br>
+$\begin{aligned}
+    \hat{\Gamma}=U S^{1/2}\\
+    \hat{X}_0=S^{1/2}V^*
+\end{aligned}$
+</div>
+
+
+
+<div class="col">
+
+<figure>
+  <img src="img\defense\obsv.png" height="750">
+</figure>
+
+
+
+</div>
+
+</div>
+
+</section>
+
+---
+
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+# 4. Modal Analysis of Brain Wave Dynamics
+
+---
+
+# Modal Analysis of Brain Wave Dynamics
+## Brain Wave Modes  are Traveling and Standing
+<section>
+<img class="plain" src="img/animode.gif" alt="Trial 5, Averaged" style="height:600px;">
+<img class="plain" src="img/animode2.gif" alt="Trial 5, Averaged" style="height:600px;">
+</section>
+
+<section>
+<img class="plain" src="img\defense\braingif\standing.gif" alt="Trial 5, Averaged" style="height:600px;">
+<img class="plain" src="img\defense\braingif\traveling.gif" alt="Trial 5, Averaged" style="height:600px;">
+</section>
+
 
 
 
