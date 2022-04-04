@@ -18,8 +18,7 @@
 ### 4. Modal Analysis of Brain Wave Dynamics
 ### 5. Adaptive Unknown Input Estimators
 ### 6. Reconstructing the Brain's Unknown Input
-### 7. On the Observability of Matrix-Vector Dynamical Systems
-### 8. Conclusions 
+### 7. Conclusions 
 
 
 ---
@@ -50,10 +49,9 @@
 
 <img src="img/factory.jpg" alt="Trial 5, Averaged" width="32%">
 <img src="img/hospital2.jpg" alt="Trial 5, Averaged" width="32%">
-<img src="img/army2.jpg" alt="Trial 5, Averaged" width="32%">
+<img src="img/farm.jpg" alt="Trial 5, Averaged" width="32%">
 
 <div style="text-align: right"> <sub><sub><sup><a href="https://www.wired.co.uk/article/robots-in-the-workplace">Spencer Lowell</a>, Wired, 2021</sup></sup></sub></div>
-<div style="text-align: right"> <sub><sub><sup><a href="https://www.flickr.com/photos/soldiersmediacenter/3966243098/in/photolist-73u2TG-dWQUxz-efXH4o-igJm3D-5q7oLi-6fqobG-dUigyC-5YRPEK-a92PNx-5YW2PN-6rGoZD-5SSAhx-4yRwME-5kS1mc-4LCHJ9">Army</a>, 2009</sup></sup></sub></div>
 
 ---
 
@@ -274,6 +272,7 @@ accepting the uncertainty in $A_m$.
 </div>
 
 ----
+
 ## Modes elegantly capture the spatio-temporal dynamics
 
 <style>
@@ -699,19 +698,407 @@ $\begin{aligned}
 
 ---
 
-# Modal Analysis of Brain Wave Dynamics
-## Brain Wave Modes  are Traveling and Standing
 <section>
+<h1> Modal Analysis of Brain Wave Dynamics </h1>
+<h2> Brain wave modes are traveling and standing </h2>
 <img class="plain" src="img/animode.gif" alt="Trial 5, Averaged" style="height:600px;">
 <img class="plain" src="img/animode2.gif" alt="Trial 5, Averaged" style="height:600px;">
 </section>
 
 <section>
+<h1> Modal Analysis of Brain Wave Dynamics </h1>
+<h2> Brain wave modes are traveling and standing </h2>
 <img class="plain" src="img\defense\braingif\standing.gif" alt="Trial 5, Averaged" style="height:600px;">
 <img class="plain" src="img\defense\braingif\traveling.gif" alt="Trial 5, Averaged" style="height:600px;">
 </section>
 
 
+<section>
+<h1> Modal Analysis of Brain Wave Dynamics </h1>
+<h2> Some brain wave modes are task independent </h2>
+<img class="plain" src="img/common1.gif" alt="Trial 5, Averaged" style="height:500px;">
+<img class="plain" src="img/common2.gif" alt="Trial 5, Averaged" style="height:500px;">
+
+<table style="width:100%">
+  <tr>
+    <th> </th>
+    <th>Frequency</th>
+    <th>Damping [%]</th>
+    <th>Complexity [%] </th>
+    <th>Shape Correl.</th>
+  </tr>
+  <tr>
+    <td>Alpha Mode 1 </td>
+    <td> $4.34\pm 0.03$ </td>
+    <td> $8.20\pm 1.20$ </td>
+    <td> $11.47\pm 17.59$ </td>
+    <td> $0.97 \pm 0.016$ </td>
+  </tr>
+  <tr>
+    <td>Beta Mode 2 </td>
+    <td> $21.83 \pm 0.22$ </td>
+    <td> $1.98 \pm 2.63$ </td>
+    <td> $32.29 \pm 35.67$ </td>
+    <td> $0.96 \pm 0.018$ </td>
+  </tr>
+  <tr>
+    <td>Gamma Mode 3 </td>
+    <td> $40.39\pm 0.26$ </td>
+    <td> $11.87 \pm 7.49$ </td>
+    <td> $12.42 \pm 16.88$ </td>
+    <td> $0.99 \pm 0.010$ </td>
+  </tr>
+  <tr>
+    <td>Gamma Mode 4 </td>
+    <td> $44.19 \pm 0.24$ </td>
+    <td> $2.52\pm 1.39$ </td>
+    <td> $2.93\pm 5.69$ </td>
+    <td> $0.99 \pm 0.012$ </td>
+  </tr>
+</table>
+
+</section>
+
+<section>
+<h1> Modal Analysis of Brain Wave Dynamics </h1>
+<h2> Brain wave modes are interindividual </h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+<img class="plain" src="img\confmat.jpg" alt="Trial 5, Averaged" style="height:800px;">
+</div>
 
 
 
+<div class="col">
+
+<table style="width:100%">
+  <tr>
+    <th>Reference</th>
+    <th>No. of Electrodes</th>
+    <th>Accuracy [%]</th>
+  </tr>
+  <tr>
+    <td>This work</td>
+    <td>32</td>
+    <td>99.85</td>
+  </tr>
+  <tr>
+    <td>This work</td>
+    <td>8</td>
+    <td>96.45</td>
+  </tr>
+  <tr>
+    <td><a href="https://ieeexplore.ieee.org/document/8745473">Wilaiprasitporn et al.</a> </td>
+    <td>32</td>
+    <td>99.90</td>
+  </tr>
+  <tr>
+    <td><a href="https://ieeexplore.ieee.org/document/8745473">Wilaiprasitporn et al.</a> </td>
+    <td>5</td>
+    <td>99.1</td>
+  </tr>
+  <tr>
+  <tr>
+    <td><a href="https://www.worldscientific.com/doi/abs/10.1142/S0129065717500356">DelPozo-Banos et al.</a> </td>
+    <td>32</td>
+    <td>97.97</td>
+  </tr>
+  <tr>
+</table>
+
+</div>
+</section>
+
+<section>
+<h1> Modal Analysis of Brain Wave Dynamics </h1>
+<h2> Brain wave modes poorly match nonlinear dynamics </h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+<figure>
+  <img src="img/defense/superposemodes.gif" alt="Trulli" height="600">
+</figure>
+</div>
+
+
+
+<div class="col">
+
+<figure>
+  <img src="img/defense/bad_modes.gif" alt="Trulli" height="600">
+</figure>
+
+
+
+</div>
+
+
+</section>
+
+---
+
+# 5. Adaptive Unknown Input Estimators
+
+---
+
+<section>
+<h1> Adaptive Unknown Input Estimators </h1>
+<h2> Estimator overview </h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+
+<dl>
+<dt>Three significant uncertainties</dt>
+  <dd>- Input $u$ is unknown, external</dd>
+  <dd>- State matrix $A$ may have uncertainty</dd>
+  <dd>- General process uncertainty $v_x$</dd>
+<dt>Can we synthesize $u$ and correct $A$?</dt>
+</dl> 
+</div>
+
+
+
+<div class="col">
+
+\begin{aligned}
+    \dot{x}&=Ax+Bu+v_x\\\
+    y&=Cx
+\end{aligned}
+
+
+
+</div>
+
+
+</section>
+
+<section>
+<h1> Adaptive Unknown Input Estimators </h1>
+<h2> Modeling unknown inputs </h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+
+<dl>
+<dt>Approximate input space $\mathbb{U}$</dt>
+  <dd>- $\hat{u}=\sum_{i=1}^{N} c_i f_i(t)$</dd>
+<dt>Persisten Inputs</dt>
+  <dd>- $\dot{z}_u=F_u z_u$</dd>
+  <dd>- $\hat{u}=\Theta_u z_u$</dd>
+  <dd>- $F_u = \begin{bmatrix} 0 & 1 & 0 \\\ -\omega^2 & 0 & 0 \\\ 0 & 0 & 0 \end{bmatrix}$</dd>
+</dl> 
+</div>
+
+
+
+<div class="col">
+
+<figure>
+  <img src="img/defense/uhat.gif" alt="Trulli" height="600">
+</figure>
+
+
+</div>
+
+
+</section>
+
+<section>
+<h1> Adaptive Unknown Input Estimators </h1>
+<h2> Architecture and estimator error </h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+
+<figure>
+  <img src="img/defense/est_arch.png" alt="Trulli" height="600">
+</figure>
+</div>
+
+
+
+<div class="col">
+
+Recover $A$ with adaptive scheme
+`$$ A \equiv A_m +B L_{*} C $$`
+`$$ \dot{L} = -e_y y^* \gamma_e - \alpha L; \ \alpha>0, \ \gamma_e > 0 $$`
+<br>
+Error dynamics
+
+`$$ \dot{e}=(\bar{A}+\bar{K} \bar{C})e+\bar{B}w + v $$`
+`$$ \begin{bmatrix} \dot{e}_x \\\ \dot{e}_z \end{bmatrix} = \Big(\begin{bmatrix} A_m & B \Theta_u \\\ 0 & F_u \end{bmatrix} + \begin{bmatrix} K_x \\\ K_u \end{bmatrix} \begin{bmatrix} C & 0 \end{bmatrix} \Big) \begin{bmatrix} e_x \\\ e_z \end{bmatrix} +\begin{bmatrix} B \\\ 0 \end{bmatrix} w +\begin{bmatrix} v_x \\\ v_u \end{bmatrix}$$`
+`$$ \begin{bmatrix} \dot{e}_x \\\ \dot{e}_z \end{bmatrix} = \underbrace{\begin{bmatrix} A_m+K_x C & B \Theta_u \\\ K_u C & F_u \end{bmatrix}}_\text{$\bar{A}_c$} \begin{bmatrix} e_x \\\ e_z \end{bmatrix} +\begin{bmatrix} B \\\ 0 \end{bmatrix} w +\begin{bmatrix} v_x \\\ v_u \end{bmatrix}$$`
+
+
+</div>
+
+
+
+</section>
+
+<section>
+<h1> Adaptive Unknown Input Estimators </h1>
+<h2> Architecture and estimator error </h2>
+
+<dl>
+<dt>ASD plant dynamics</dt>
+<dt>Bounded `$L_{*}$`, $v$, and $\gamma_e$</dt>
+<dt>Error in state and input converges to an n-ball centered at zero</dt>
+  <dd>- `$V(e,\Delta L) = \frac{1}{2} e^* \bar{P} e + \frac{1}{2} \text{tr}(\Delta L \gamma_e^{-1} \Delta L^*)$`</dd>
+  <dd>- `$\lim_{t \rightarrow \infty} \sup ||e(t)|| \leq \frac{1+\sqrt{\lambda_{\text{max}}\bar{P}}}{\alpha \sqrt{\lambda_{\text{min}}\bar{P}}} M_v \equiv R^*$`</dd>
+</dl> 
+
+
+
+
+
+
+
+<figure>
+  <img src="img/defense/x_ex2.gif" alt="Trulli" height="400">
+  <img src="img/defense/u_ex3.gif" alt="Trulli" height="400">
+</figure>
+
+</section>
+
+---
+
+# 6. Reconstructing the Brain's Unknown Input
+
+---
+
+<section>
+<h1> Reconstructing the Brain's Unknown Input </h1>
+<h2> Reminder </h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+
+<dl>
+<dt>Three significant uncertainties</dt>
+  <dd>- Input $u$ is unknown, external</dd>
+  <dd>- State matrix $A$ may have uncertainty</dd>
+  <dd>- General process uncertainty $v_x$</dd>
+<dt>Can we synthesize $u$ and correct $A$?</dt>
+</dl> 
+</div>
+
+
+
+<div class="col">
+
+\begin{aligned}
+    \dot{x}&=Ax+Bu+v_x\\\
+    y&=Cx
+\end{aligned}
+
+
+
+</div>
+
+
+</section>
