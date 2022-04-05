@@ -1,0 +1,17 @@
+AUTHOR=Fang Yinfeng, Yang Haiyang, Zhang Xuguang, Liu Han, Tao Bo
+	 
+TITLE=Multi-Feature Input Deep Forest for EEG-Based Emotion Recognition  
+	
+JOURNAL=Frontiers in Neurorobotics     
+	
+VOLUME=14      
+	
+YEAR=2021   
+		
+URL=https://www.frontiersin.org/article/10.3389/fnbot.2020.617531     
+	  
+DOI=10.3389/fnbot.2020.617531    
+	
+ISSN=1662-5218   
+
+ABSTRACT=Due to the rapid development of human–computer interaction, affective computing has attracted more and more attention in recent years. In emotion recognition, Electroencephalogram (EEG) signals are easier to be recorded than other physiological experiments and are not easily camouflaged. Because of the high dimensional nature of EEG data and the diversity of human emotions, it is difficult to extract effective EEG features and recognize the emotion patterns. This paper proposes a multi-feature deep forest (MFDF) model to identify human emotions. The EEG signals are firstly divided into several EEG frequency bands and then extract the power spectral density (PSD) and differential entropy (DE) from each frequency band and the original signal as features. A five-class emotion model is used to mark five emotions, including neutral, angry, sad, happy, and pleasant. With either original features or dimension reduced features as input, the deep forest is constructed to classify the five emotions. These experiments are conducted on a public dataset for emotion analysis using physiological signals (DEAP). The experimental results are compared with traditional classifiers, including K Nearest Neighbors (KNN), Random Forest (RF), and Support Vector Machine (SVM). The MFDF achieves the average recognition accuracy of 71.05%, which is 3.40%, 8.54%, and 19.53% higher than RF, KNN, and SVM, respectively. Besides, the accuracies with the input of features after dimension reduction and raw EEG signal are only 51.30 and 26.71%, respectively. The result of this study shows that the method can effectively contribute to EEG-based emotion classification tasks.

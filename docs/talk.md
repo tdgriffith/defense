@@ -5,7 +5,7 @@
 ## T. Griffith
 #### Defense
 
-#### May 20, 2021
+#### April 28, 2022
 
 ---
 
@@ -217,7 +217,7 @@ where $A, \ B, \ C, \ v_x, \ x, \text{and} \ u $ are ***all unknown***.
 Identify the plant: 
   $\begin{aligned}
     \begin{cases}
-\dot{x}_m=A_m x \\\
+\dot{x}_m=A_m x +v_x \\\
 y_m=C x_m
 \end{cases}
   \end{aligned}$,
@@ -531,7 +531,7 @@ $\begin{aligned}
 Identify the plant: 
   $\begin{aligned}
     \begin{cases}
-\dot{x}_m=A_m x \\\
+\dot{x}_m=A_m x +v_x \\\
 y_m=C x_m
 \end{cases}
   \end{aligned}$
@@ -593,7 +593,7 @@ $\begin{aligned}
 Identify the plant: 
   $\begin{aligned}
     \begin{cases}
-\dot{x}_m=A_m x \\\
+\dot{x}_m=A_m x +v_x\\\
 y_m=C x_m
 \end{cases}
   \end{aligned}$
@@ -655,7 +655,7 @@ $\begin{aligned}
 Identify the plant: 
   $\begin{aligned}
     \begin{cases}
-\dot{x}_m=A_m x \\\
+\dot{x}_m=A_m x +v_x\\\
 y_m=C x_m
 \end{cases}
   \end{aligned}$
@@ -1051,12 +1051,14 @@ Error dynamics
 ---
 
 # 6. Reconstructing the Brain's Unknown Input
+Recall: Solving the nonstationary problem
 
 ---
 
 <section>
+
 <h1> Reconstructing the Brain's Unknown Input </h1>
-<h2> Reminder </h2>
+<h2> aUIO outperforms static modes </h2>
 <style>
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
@@ -1078,27 +1080,297 @@ Error dynamics
 
 <div class="col">
 
-<dl>
-<dt>Three significant uncertainties</dt>
-  <dd>- Input $u$ is unknown, external</dd>
-  <dd>- State matrix $A$ may have uncertainty</dd>
-  <dd>- General process uncertainty $v_x$</dd>
-<dt>Can we synthesize $u$ and correct $A$?</dt>
-</dl> 
+<h3> aUIO on unseen data </h3>
+<figure>
+  <img src="img/defense/square_L.gif" alt="Trulli" height="750">
+</figure>
 </div>
 
 
 
 <div class="col">
 
-\begin{aligned}
-    \dot{x}&=Ax+Bu+v_x\\\
-    y&=Cx
-\end{aligned}
+<h3> Weighted modes on seen data </h3>
+<figure>
+  <img src="img/defense/square_noL.gif" alt="Trulli" height="750">
+</figure>
 
 
 
 </div>
 
+</div>
 
 </section>
+
+<section>
+
+<h1> Reconstructing the Brain's Unknown Input </h1>
+<h2> aUIO critically updates model as needed </h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+
+<h3> aUIO on unseen data </h3>
+<figure>
+  <img src="img/defense/square_L.gif" alt="Trulli" height="750">
+</figure>
+</div>
+
+
+
+<div class="col">
+
+<h3> Adaptive gain matrix 2-norm </h3>
+<figure>
+  <img src="img/defense/Ly.gif" alt="Trulli" height="750">
+</figure>
+
+
+
+</div>
+
+</div>
+
+</section>
+
+</section>
+
+<section>
+
+<h1> Reconstructing the Brain's Unknown Input </h1>
+<h2> Modeling details </h2>
+
+ <ul>
+  <li>Unknown input acts evenly over spatial domain</li>
+  <li>$F_u$ generates sine-cosine basis</li>
+  <li>Static gains per LQR </li>
+</ul> 
+
+</section>
+
+<section>
+
+<h1> Reconstructing the Brain's Unknown Input </h1>
+<h2> aUIO is tolerant to parametric uncertainty in modes </h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+
+<h3> aUIO on unseen data </h3>
+<figure>
+  <img src="img/defense/no_eye.gif" alt="Trulli" height="600">
+</figure>
+</div>
+
+
+
+<div class="col">
+
+<h3> aUIO with wrong $A_m$ </h3>
+<figure>
+  <img src="img/defense/eye.gif" alt="Trulli" height="600">
+</figure>
+
+
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h1> Reconstructing the Brain's Unknown Input </h1>
+<h2> Classification via estimation </h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+
+<figure>
+  <img src="img/defense/val_arou.jpg" alt="Trulli" height="400">
+</figure>
+
+</div>
+
+
+
+<div class="col">
+
+<figure>
+  <img src="img/defense/classification_alg.png" alt="Trulli" height="300">
+</figure>
+
+
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h1> Reconstructing the Brain's Unknown Input </h1>
+<h2> Classification via estimation </h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+<h3> Valence Classification </h3>
+<figure>
+  <img src="img/defense/val_acc.png" alt="Trulli" height="600">
+</figure>
+
+</div>
+
+<div class="col">
+<h3> Arousal Classification </h3>
+<figure>
+  <img src="img/defense/arou_acc.png" alt="Trulli" height="600">
+</figure>
+
+
+</div>
+
+</div>
+<div style="text-align: right"> <sub><sub><sup><a href="https://dl.acm.org/doi/10.5555/3297863.3297883">CNN1</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0010482521005515">CNN2</a>, <a href="https://www.frontiersin.org/articles/10.3389/fnbot.2020.617531/full">MFDF</a></sup></sup></sub></div>
+
+
+</section>
+
+<section>
+
+<h1> Reconstructing the Brain's Unknown Input </h1>
+<h2> Classification validation </h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+<table style="width:80%">
+  <tr>
+    <th>Task</th>
+    <th>aUIO Acc. [%]</th>
+    <th>PSD CNN Acc. [%]</th>
+  </tr>
+  <tr>
+    <td>DEAP Valence</td>
+    <td>77.8</td>
+    <td>68.1</td>
+  </tr>
+  <tr>
+    <td>DEAP Arousal</td>
+    <td>75.2</td>
+    <td>63.8</td>
+  </tr>
+  <tr>
+    <td>Like/Dislike</td>
+    <td>79.4</td>
+    <td>67.3</td>
+  </tr>
+  <tr>
+</table>
+
+
+</div>
+
+<div class="col">
+<h3> Static gain grid search </h3>
+<figure>
+  <img src="img/defense/DEAP_accs.png" alt="Trulli" height="600">
+</figure>
+
+
+</div>
+
+</div>
+
+</section>
+
+---
+
+# 7. Conclusions

@@ -1,0 +1,11 @@
+Md. Rabiul Islam, Md. Milon Islam, Md. Mustafizur Rahman, Chayan Mondal, Suvojit Kumar Singha, Mohiuddin Ahmad, Abdul Awal, Md. Saiful Islam, Mohammad Ali Moni,
+EEG Channel Correlation Based Model for Emotion Recognition,
+Computers in Biology and Medicine,
+Volume 136,
+2021,
+104757,
+ISSN 0010-4825,
+https://doi.org/10.1016/j.compbiomed.2021.104757.
+(https://www.sciencedirect.com/science/article/pii/S0010482521005515)
+Abstract: Emotion recognition using Artificial Intelligence (AI) is a fundamental prerequisite to improve Human-Computer Interaction (HCI). Recognizing emotion from Electroencephalogram (EEG) has been globally accepted in many applications such as intelligent thinking, decision-making, social communication, feeling detection, affective computing, etc. Nevertheless, due to having too low amplitude variation related to time on EEG signal, the proper recognition of emotion from this signal has become too challenging. Usually, considerable effort is required to identify the proper feature or feature set for an effective feature-based emotion recognition system. To extenuate the manual human effort of feature extraction, we proposed a deep machine-learning-based model with Convolutional Neural Network (CNN). At first, the one-dimensional EEG data were converted to Pearson's Correlation Coefficient (PCC) featured images of channel correlation of EEG sub-bands. Then the images were fed into the CNN model to recognize emotion. Two protocols were conducted, namely, protocol-1 to identify two levels and protocol-2 to recognize three levels of valence and arousal that demonstrate emotion. We investigated that only the upper triangular portion of the PCC featured images reduced the computational complexity and size of memory without hampering the model accuracy. The maximum accuracy of 78.22% on valence and 74.92% on arousal were obtained using the internationally authorized DEAP dataset.
+Keywords: Emotion; Convolutional neural network; Feature extraction; EEG; Pearson's correlation coefficient; Complexity
