@@ -139,7 +139,7 @@
 ---
 
 
-<!-- .slide: data-background="#ffffff" class="light" -->
+<!-- .slide: data-background="#003C71" class="dark" -->
 
 # 2. A Dynamic Systems View of Brain Waves
 
@@ -331,7 +331,7 @@ accepting the uncertainty in $A_m$.
 
 ---
 
-<!-- .slide: data-background="#ffffff" class="light" -->
+<!-- .slide: data-background="#003C71" class="dark" -->
 
 # 3. System Identification of Brain Wave Modes Using EEG
 
@@ -692,7 +692,7 @@ $\begin{aligned}
 ---
 
 
-<!-- .slide: data-background="#ffffff" class="light" -->
+<!-- .slide: data-background="#003C71" class="dark" -->
 
 # 4. Modal Analysis of Brain Wave Dynamics
 
@@ -872,6 +872,8 @@ $\begin{aligned}
 
 ---
 
+<!-- .slide: data-background="#003C71" class="dark" -->
+
 # 5. Adaptive Unknown Input Estimators
 
 ---
@@ -1049,6 +1051,8 @@ Error dynamics
 </section>
 
 ---
+
+<!-- .slide: data-background="#003C71" class="dark" -->
 
 # 6. Reconstructing the Brain's Unknown Input
 Recall: Solving the nonstationary problem
@@ -1373,4 +1377,224 @@ Recall: Solving the nonstationary problem
 
 ---
 
+<!-- .slide: data-background="#003C71" class="dark" -->
+
 # 7. Conclusions
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- .slide: data-background="#003C71" class="dark" -->
+
+## Backup: Best Fit B Matricies
+
+----
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+# *A* Convex Function for B matrix optimization
+- $\min ||y-\hat{y}-C \Delta B \hat{u}||_2$
+- ***not*** the only possible minimization
+
+----
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+# B Matrix Optimization Example
+- 3x3 example
+ - $\dot{\hat{x}} = A_m x + B \hat{u}$
+ - $A_m \neq A$ 
+- ***$\min ||y-\hat{y}-C \Delta B \hat{u}||_2$***
+- $B=\begin{bmatrix} 1.2 \\\ 1 \\\ 1.6 \end{bmatrix}$, 
+- $B_m=\begin{bmatrix} 1 \\\ 1 \\\ 1 \end{bmatrix}$
+
+
+
+
+----
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+# B Matrix Optimization Example
+- $\min ||y-\hat{y}-C \Delta B \hat{u}||_2$
+- $\Delta B=\begin{bmatrix} 0.18 \\\ 0 \\\ 0.37 \end{bmatrix}$, 
+- $B_f=\begin{bmatrix} 1.18 \\\ 1 \\\ 1.37 \end{bmatrix}$
+
+<img class="plain" src="img/bmat/toy_Bopt2.png" alt="Trial 5, Averaged" width="55%">
+
+
+----
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+# B Matrix on EEG Data
+<img class="plain" src="img/bmat/Bopt.png" alt="Trial 5, Averaged" width="90%">
+
+
+----
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+# B Matrix on EEG Data
+<img class="plain" src="img/bmat/B_ic.jpg" alt="Trial 5, Averaged" width="70%">
+
+
+----
+
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+# Current models
+<img class="plain" src="img/bmat/UIO_opt.png" alt="Trial 5, Averaged" width="45%">
+<img class="plain" src="img/bmat/Bmap2.png" alt="Trial 5, Averaged" width="45%">
+
+
+----
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+## 5. Application to Emotion Data
+
+----
+
+
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+
+## B Matrix on EEG Data: ***Satisfaction (T1)*** 
+<img class="plain" src="img/bmat/sat_map.png" alt="Trial 5, Averaged" width="60%">
+
+
+
+----
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+## B Matrix on EEG Data: ***Surprise (T2)*** 
+
+<img class="plain" src="img/bmat/surp_map.png" alt="Trial 5, Averaged" width="60%">
+
+
+----
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+## B Matrix on EEG Data: ***Fear (T8)*** 
+
+<img class="plain" src="img/bmat/fear_map.png" alt="Trial 5, Averaged" width="60%">
+
+
+
+----
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+## Comparing the same "emotion"
+
+<img class="plain" src="img/bmat/val.jpg" alt="Trial 5, Averaged" width="45%">
+
+<div style="text-align: right"> <small>Mneimne, M., Powers, A. S., Walton, K. E., Kosson, D. S., Fonda, S., & Simonetti, J. (2010). Emotional valence and arousal effects on memory and hemispheric asymmetries. Brain and Cognition, 74(1), 10-17.</small></div>
+
+
+----
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+## B Matrix on EEG Data: ***HVHA*** 
+
+<img class="plain" src="img/bmat/HVHA_map.png" alt="Trial 5, Averaged" width="60%">
+
+
+----
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+## B Matrix on EEG Data: ***HVLA*** 
+
+<img class="plain" src="img/bmat/HVLA_map.png" alt="Trial 5, Averaged" width="60%">
+
+
+----
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+## B Matrix on EEG Data: ***LVHA*** 
+
+<img class="plain" src="img/bmat/LVHA_map.png" alt="Trial 5, Averaged" width="60%">
+
+
+
+----
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+## B Matrix on EEG Data: ***LVLA***  
+
+<img class="plain" src="img/bmat/LVLA_map.png" alt="Trial 5, Averaged" width="60%">
+
+----
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+## B Matrix on EEG Data: ***Avg. Quadrants***  
+
+<img class="plain" src="img/bmat/all_emot_map.png" alt="Trial 5, Averaged" width="60%">
+
+----
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+## 6. Application to Movement Data
+
+----
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+## B Matrix on EEG Data: ***Left Hand***  
+
+<img class="plain" src="img/bmat/lh_map.png" alt="Trial 5, Averaged" width="60%">
+
+----
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+## B Matrix on EEG Data: ***Right Hand***  
+
+<img class="plain" src="img/bmat/rh_map.png" alt="Trial 5, Averaged" width="60%">
+
+----
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+## B Matrix on EEG Data: ***Resting***  
+
+<img class="plain" src="img/bmat/rest_map.png" alt="Trial 5, Averaged" width="60%">
+
+----
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+## B Matrix on EEG Data: ***All Averages***  
+
+<img class="plain" src="img/bmat/all_hand_map.png" alt="Trial 5, Averaged" width="60%">
+
+----
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+## A unique solution?
+- B matrix is different for everyone
+ - A math construct or physical significance?
+- A unique input?
+
