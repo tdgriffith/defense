@@ -1383,19 +1383,181 @@ Recall: Solving the nonstationary problem
 
 
 ---
+# Summary
 
+- Modern, sys-id techniques work on biomarker data
+- Modal representation aids interpreation and analysis
+- Complete body of UIO work
+- Online estimation of nonlinear brain wave dynamics
 
+---
 
+# Future work
 
+- Multiple data types
+- Improved analysis and classification
+- Probablistic considerations
 
-
-
-
-
-
-
+---
 
 <!-- .slide: data-background="#003C71" class="dark" -->
+
+# Acknowledgements
+
+----
+
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+
+<img src="https://engineering.tamu.edu/cse/_files/_images/_profile-images/chaspari-theodora-25April2019.jpg" alt="Trulli" height="500">
+  <figcaption>Theodora Chaspari </figcaption>
+</div>
+
+<div class="col">
+<figure>
+  <img src="https://engineering.tamu.edu/mechanical/_files/_images/_profile-images/saripalli.jpg" alt="Trulli" height="500">
+    <figcaption>Srikanth Saripalli</figcaption>
+</figure>
+</div>
+
+</div>
+
+----
+
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+
+<img src="https://www.nasa.gov/sites/default/files/styles/side_image/public/thumbnails/image/balas-mark-biowebsite.jpg?itok=LxO5H0UR" alt="Trulli" height="500">
+  <figcaption> Mark Balas </figcaption>
+</div>
+
+<div class="col">
+<figure>
+  <img src="img\defense\prof.jpg" alt="Trulli" height="500">
+    <figcaption>James Hubbard</figcaption>
+</figure>
+</div>
+
+</div>
+
+----
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+
+<a href="https://unsplash.com/photos/OhfWTDyJp3I"><img src="https://images.unsplash.com/photo-1602244547823-8bebf9920b35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80"></a>
+
+</div>
+
+<div class="col">
+ <ul>
+  <li> Dr. Vinod Gehlot</li>
+  <li> Sarai Barnett </li>
+  <li> Dr. JD</li>
+  <li> Prof. Zohaib Hasnain </li>
+  <li> Prof. Mike Walsh </li>
+  <li>Zaryab Shahid</li>
+  <li>Lise Ochej</li>
+  <li>Kevin Fuentes</li>
+</ul> 
+</div>
+
+</div>
+
+----
+
+
+<h3> Good TAMU </h3>
+ <ul>
+  <li> Sandra Havens </li>
+  <li> Rebecca Simon </li>
+  <li> Prof. Joanna Tsenn </li>
+  <li> Kaustubh Mahesh Tangsali</li>
+  <li> Briana Holton </li>
+  <li> Bryton Praslicka </li>
+  <li>Robert Trépanier</li>
+  <li>Harold Gamarro</li>
+</ul> 
+
+
+
+
+---
+
+<!-- .slide: data-background="#500000" class="dark" -->
+# A Modal Approach to the Space Time Dynamics of Cognitive Biomarkers
+
+> Highly organized research is guaranteed to produce nothing new.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+<!-- .slide: data-background="#5B6236" class="dark" -->
 
 ## Backup: Best Fit B Matricies
 
