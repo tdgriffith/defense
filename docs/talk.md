@@ -192,14 +192,13 @@
 ---
 
 
-<!-- .slide: data-background="#ffffff" class="light" -->
-
-# A cannonical approach: 
-
+<section>
+<h1> A cannonical approach: </h1>
+<br>
 <img src="img/defense/eeg_ex.png" alt="Trulli" height="400">
-
+<br>
 :arrow_double_down:
-
+<br>
 True brain wave plant: 
   $\begin{aligned}
     \begin{cases}
@@ -207,12 +206,13 @@ True brain wave plant:
     y=Cx
     \end{cases}
   \end{aligned}$
-
+<br>
 where $A, \ B, \ C, \ v_x, \ x, \text{and} \ u $ are ***all unknown***.
 
-----
+</section>
 
-## This level of uncertainty is an unsovled problem 
+<section>
+<h2> This level of uncertainty is an unsovled problem </h2>
 
 Identify the plant: 
   $\begin{aligned}
@@ -221,12 +221,15 @@ Identify the plant:
 y_m=C x_m
 \end{cases}
   \end{aligned}$,
-
+<br>
 accepting the uncertainty in $A_m$.
 
-----
+</section>
 
-## Treating nonlinear effects
+---
+
+<section>
+<h2> Treating nonlinear effects </h2>
 <style>
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
@@ -247,18 +250,20 @@ accepting the uncertainty in $A_m$.
 <div class="container vertical-center">
 
 <div class="col">
+
 <figure>
-  <img src="img/defense/nonlin1.PNG" alt="Trulli" height="150">
+  <img src="img/defense/nonlin1.PNG" alt="Trulli" height="100">
 </figure>
 <figure>
-  <img src="img/defense/nonlin2.PNG" alt="Trulli" height="150">
+  <img src="img/defense/nonlin2.PNG" alt="Trulli" height="100">
 </figure>
 <figure>
-  <img src="img/defense/nonlin3.PNG" alt="Trulli" height="150">
+  <img src="img/defense/nonlin3.PNG" alt="Trulli" height="100">
 </figure>
 </div>
 
 <div class="col">
+
 <h3> Adaptive Unknown Input Brain Wave Estimator: </h3>
 
   $\begin{aligned}
@@ -269,11 +274,13 @@ accepting the uncertainty in $A_m$.
   \end{aligned}$
 </div>
 
-</div>
+</section>
 
-----
 
-## Modes elegantly capture the spatio-temporal dynamics
+---
+
+<section>
+<h2> Modes elegantly capture the spatio-temporal dynamics </h2>
 
 <style>
 .vertical-center {
@@ -338,8 +345,7 @@ accepting the uncertainty in $A_m$.
 ---
 
 <!-- .slide: data-background="#ffffff" class="light" -->
-----
-
+<section>
 <h1> System Identification of Brain Wave Modes Using EEG </h1>
 <h2> Identifying linear patterns </h2>
 <style>
@@ -362,6 +368,7 @@ accepting the uncertainty in $A_m$.
 <div class="container vertical-center">
 
 <div class="col">
+
 Identify the plant: 
   $\begin{aligned}
     \begin{cases}
@@ -380,16 +387,17 @@ y_m=C x_m
 </div>
 
 <div class="col">
+
 <figure>
-  <img src="img/defense/modal_out.png" alt="Trulli" height="700">
+  <img src="img/defense/modal_out.png" alt="Trulli" height="70">
 </figure>
 </div>
 
 </div>
 
-----
+</section>
 
-
+<section>
 <h1> System Identification of Brain Wave Modes Using EEG </h1>
 <h2> Identifying linear patterns </h2>
 <style>
@@ -443,8 +451,9 @@ $\begin{aligned}
 
 </div>
 
-----
+</section>
 
+<section>
 <h1> System Identification of Brain Wave Modes Using EEG </h1>
 <h2> Identifying linear patterns </h2>
 <style>
@@ -498,8 +507,9 @@ $\begin{aligned}
 
 </div>
 
-----
+</section>
 
+<section>
 <h1> System Identification of Brain Wave Modes Using EEG </h1>
 <h2> Identifying linear patterns </h2>
 <style>
@@ -557,8 +567,9 @@ $\begin{aligned}
 
 </div>
 
-----
+</section>
 
+<section>
 <h1> System Identification of Brain Wave Modes Using EEG </h1>
 <h2> Identifying linear patterns </h2>
 <style>
@@ -617,8 +628,9 @@ $\begin{aligned}
 
 </div>
 
-----
+</section>
 
+<section>
 <h1> System Identification of Brain Wave Modes Using EEG </h1>
 <h2> Identifying linear patterns </h2>
 <style>
@@ -676,7 +688,7 @@ $\begin{aligned}
 
 </div>
 
-
+</section>
 
 ---
 
