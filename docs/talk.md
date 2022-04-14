@@ -338,7 +338,7 @@ accepting the uncertainty in $A_m$.
 ---
 
 <!-- .slide: data-background="#ffffff" class="light" -->
-<section>
+----
 
 <h1> System Identification of Brain Wave Modes Using EEG </h1>
 <h2> Identifying linear patterns </h2>
@@ -372,24 +372,23 @@ y_m=C x_m
   <br><br>
   <h3> Considered algorithms </h3>
  <ul>
-  <li>OMA</li>
+  <li><strong><em>OMA</em></strong></li>
   <li>NeXT-ERA</li>
   <li>n4sid</li>
-  <li><strong><em>DMD</em></strong></li>
+  <li>DMD</li>
 </ul> 
 </div>
 
 <div class="col">
 <figure>
-  <img src="img/defense/modal_out.png" alt="Trulli" height="800">
+  <img src="img/defense/modal_out.png" alt="Trulli" height="700">
 </figure>
 </div>
 
 </div>
 
-</section>
+----
 
-<section>
 
 <h1> System Identification of Brain Wave Modes Using EEG </h1>
 <h2> Identifying linear patterns </h2>
@@ -444,9 +443,7 @@ $\begin{aligned}
 
 </div>
 
-</section>
-
-<section>
+----
 
 <h1> System Identification of Brain Wave Modes Using EEG </h1>
 <h2> Identifying linear patterns </h2>
@@ -501,10 +498,7 @@ $\begin{aligned}
 
 </div>
 
-</section>
-
-
-<section>
+----
 
 <h1> System Identification of Brain Wave Modes Using EEG </h1>
 <h2> Identifying linear patterns </h2>
@@ -563,10 +557,7 @@ $\begin{aligned}
 
 </div>
 
-</section>
-
-
-<section>
+----
 
 <h1> System Identification of Brain Wave Modes Using EEG </h1>
 <h2> Identifying linear patterns </h2>
@@ -626,9 +617,7 @@ $\begin{aligned}
 
 </div>
 
-</section>
-
-<section>
+----
 
 <h1> System Identification of Brain Wave Modes Using EEG </h1>
 <h2> Identifying linear patterns </h2>
@@ -687,7 +676,7 @@ $\begin{aligned}
 
 </div>
 
-</section>
+
 
 ---
 
@@ -698,22 +687,21 @@ $\begin{aligned}
 
 ---
 
-<section>
+
 <h1> Modal Analysis of Brain Wave Dynamics </h1>
 <h2> Brain wave modes are traveling and standing </h2>
 <img class="plain" src="img/animode.gif" alt="Trial 5, Averaged" style="height:600px;">
 <img class="plain" src="img/animode2.gif" alt="Trial 5, Averaged" style="height:600px;">
-</section>
 
-<section>
+----
+
 <h1> Modal Analysis of Brain Wave Dynamics </h1>
 <h2> Brain wave modes are traveling and standing </h2>
 <img class="plain" src="img\defense\braingif\standing.gif" alt="Trial 5, Averaged" style="height:600px;">
 <img class="plain" src="img\defense\braingif\traveling.gif" alt="Trial 5, Averaged" style="height:600px;">
-</section>
 
+----
 
-<section>
 <h1> Modal Analysis of Brain Wave Dynamics </h1>
 <h2> Some brain wave modes are task independent </h2>
 <img class="plain" src="img/common1.gif" alt="Trial 5, Averaged" style="height:500px;">
@@ -757,9 +745,8 @@ $\begin{aligned}
   </tr>
 </table>
 
-</section>
+----
 
-<section>
 <h1> Modal Analysis of Brain Wave Dynamics </h1>
 <h2> Brain wave modes are interindividual </h2>
 <style>
@@ -825,9 +812,9 @@ $\begin{aligned}
 </table>
 
 </div>
-</section>
 
-<section>
+----
+
 <h1> Modal Analysis of Brain Wave Dynamics </h1>
 <h2> Brain wave modes poorly match nonlinear dynamics </h2>
 <style>
@@ -868,7 +855,6 @@ $\begin{aligned}
 </div>
 
 
-</section>
 
 ---
 
@@ -878,7 +864,7 @@ $\begin{aligned}
 
 ---
 
-<section>
+
 <h1> Adaptive Unknown Input Estimators </h1>
 <h2> Estimator overview </h2>
 <style>
@@ -925,9 +911,8 @@ $\begin{aligned}
 </div>
 
 
-</section>
+----
 
-<section>
 <h1> Adaptive Unknown Input Estimators </h1>
 <h2> Modeling unknown inputs </h2>
 <style>
@@ -973,9 +958,8 @@ $\begin{aligned}
 </div>
 
 
-</section>
+----
 
-<section>
 <h1> Adaptive Unknown Input Estimators </h1>
 <h2> Architecture and estimator error </h2>
 <style>
@@ -1023,9 +1007,8 @@ Error dynamics
 
 
 
-</section>
+----
 
-<section>
 <h1> Adaptive Unknown Input Estimators </h1>
 <h2> Architecture and estimator error </h2>
 
@@ -1048,7 +1031,7 @@ Error dynamics
   <img src="img/defense/u_ex3.gif" alt="Trulli" height="400">
 </figure>
 
-</section>
+
 
 ---
 
@@ -1059,7 +1042,6 @@ Recall: Solving the nonstationary problem
 
 ---
 
-<section>
 
 <h1> Reconstructing the Brain's Unknown Input </h1>
 <h2> aUIO outperforms static modes </h2>
@@ -1105,9 +1087,8 @@ Recall: Solving the nonstationary problem
 
 </div>
 
-</section>
+----
 
-<section>
 
 <h1> Reconstructing the Brain's Unknown Input </h1>
 <h2> aUIO critically updates model as needed </h2>
@@ -1153,11 +1134,7 @@ Recall: Solving the nonstationary problem
 
 </div>
 
-</section>
-
-</section>
-
-<section>
+----
 
 <h1> Reconstructing the Brain's Unknown Input </h1>
 <h2> Modeling details </h2>
@@ -1168,9 +1145,7 @@ Recall: Solving the nonstationary problem
   <li>Static gains per LQR </li>
 </ul> 
 
-</section>
-
-<section>
+----
 
 <h1> Reconstructing the Brain's Unknown Input </h1>
 <h2> aUIO is tolerant to parametric uncertainty in modes </h2>
@@ -1216,9 +1191,7 @@ Recall: Solving the nonstationary problem
 
 </div>
 
-</section>
-
-<section>
+----
 
 <h1> Reconstructing the Brain's Unknown Input </h1>
 <h2> Classification via estimation </h2>
@@ -1263,9 +1236,7 @@ Recall: Solving the nonstationary problem
 
 </div>
 
-</section>
-
-<section>
+----
 
 <h1> Reconstructing the Brain's Unknown Input </h1>
 <h2> Classification via estimation </h2>
@@ -1309,9 +1280,7 @@ Recall: Solving the nonstationary problem
 <div style="text-align: right"> <sub><sub><sup><a href="https://dl.acm.org/doi/10.5555/3297863.3297883">CNN1</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0010482521005515">CNN2</a>, <a href="https://www.frontiersin.org/articles/10.3389/fnbot.2020.617531/full">MFDF</a></sup></sup></sub></div>
 
 
-</section>
-
-<section>
+----
 
 <h1> Reconstructing the Brain's Unknown Input </h1>
 <h2> Classification validation </h2>
@@ -1373,7 +1342,7 @@ Recall: Solving the nonstationary problem
 
 </div>
 
-</section>
+
 
 ---
 
