@@ -25,36 +25,6 @@
 
 <!-- .slide: data-background="#ffffff" class="light" -->
 # 1. Introduction & Motivation
-<div class="col">
-<img src="img/defense/black_box.png" alt="Trial 5, Averaged" width="80%">
-<figcaption> Fig 1. A Wholistic View of Brain Waves </figcaption>
-</div>
-
----
-
-<!-- .slide: data-background="#ffffff" class="light" -->
-
-<div class="col">
-<img src="img/defense/guardrails.jpg" alt="Trial 5, Averaged" width="80%">
-</div>
-
-<div style="text-align: right"> <sub><sub><sup><a href="https://unsplash.com/@hogarthd">Hogarth de la Plante</a>, Unsplash</sup></sup></sub></div>
-
----
-
-<!-- .slide: data-background="#ffffff" class="light" -->
-
-# Clinical and HMI Applications
-
-<img src="img/factory.jpg" alt="Trial 5, Averaged" width="32%">
-<img src="img/hospital2.jpg" alt="Trial 5, Averaged" width="32%">
-<img src="img/farm.jpg" alt="Trial 5, Averaged" width="32%">
-
-<div style="text-align: right"> <sub><sub><sup><a href="https://www.wired.co.uk/article/robots-in-the-workplace">Spencer Lowell</a>, Wired, 2021</sup></sup></sub></div>
-
----
-
-# Shared flow of information is implied
 <style>
 .container{
     display: flex;
@@ -82,6 +52,26 @@
 
 <!-- .slide: data-background="#ffffff" class="light" -->
 
+# Novel potential
+
+>  There has been a recent proliferation of more rugged and durable sensor devices (e.g., fNIRS sensors) that can be used while people take part in ecologically valid activities to assess changes in neurophysiology, physiology, and behavior that correlate with cognitive state. In addition, recent advances in machine learning and modeling techniques can be used to interpret information about human states (e.g., SA) from noisy data acquired in such environments that previously was unusable.
+
+
+
+<div style="text-align: right"> <small>Bracken, B., Tobyne, S., Winder, A., Shamsi, N., & Endsley, M. R. (2021, July). Can Situation Awareness Be Measured Physiologically?. In International Conference on Applied Human Factors and Ergonomics (pp. 31-38). Springer, Cham.</small></div>
+
+---
+
+
+# Cognition as a black box
+<div class="col">
+<img src="img/defense/black_box.png" alt="Trial 5, Averaged" width="80%">
+</div>
+
+---
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
 # State of the art: surveys and orthogonal bases
 
 
@@ -96,39 +86,17 @@
 
 <!-- .slide: data-background="#ffffff" class="light" -->
 
-# Novel potential
+<div class="col">
+<img src="img/defense/guardrails.jpg" alt="Trial 5, Averaged" width="80%">
+</div>
 
->  There has been a recent proliferation of more rugged and durable sensor devices (e.g., fNIRS sensors) that can be used while people take part in ecologically valid activities to assess changes in neurophysiology, physiology, and behavior that correlate with cognitive state. In addition, recent advances in machine learning and modeling techniques can be used to interpret information about human states (e.g., SA) from noisy data acquired in such environments that previously was unusable.
-
-
-
-<div style="text-align: right"> <small>Bracken, B., Tobyne, S., Winder, A., Shamsi, N., & Endsley, M. R. (2021, July). Can Situation Awareness Be Measured Physiologically?. In International Conference on Applied Human Factors and Ergonomics (pp. 31-38). Springer, Cham.</small></div>
+<div style="text-align: right"> <sub><sub><sup><a href="https://unsplash.com/@hogarthd">Hogarth de la Plante</a>, Unsplash</sup></sup></sub></div>
 
 ---
 
-<!-- .slide: data-background="#ffffff" class="light" -->
-
-## There is a demonstrated need for improved models of neural biomarkers that consider ***nonstationary spatio-temporal dynamics*** jointly.
 
 
-- Rigorous
-- Transparent
-- Non-invasive
-- Physiological
 
----
-
-<!-- .slide: data-background="#ffffff" class="light" -->
-
-# Modeling considerations
-- Local vs. ***Whole***
-- Linear vs. ***Nonlinear***
-- ***Individual*** vs. Population
-- Static vs. ***Dynamic***
-- Offline vs. ***Online***
-- Parametric vs. ***Nonparametric***
-
----
 
 
 <!-- .slide: data-background="#003C71" class="dark" -->
@@ -202,6 +170,7 @@ where $A, \ B, \ C, \ v_x, \ x, \text{and} \ u $ are ***all unknown***.
 </section>
 
 <section>
+$A, \ B, \ C, \ v_x, \ x, \text{and} \ u $ are ***all unknown***.
 <h2> This level of uncertainty is an unsovled problem </h2>
 
 Identify the plant: 
@@ -488,7 +457,7 @@ $\begin{aligned}
 
 <div class="col">
 <figure>
-  <img src="img/defense/truncate_ex.png" alt="Trulli" height="500">
+  <img src="img/defense/truncate_ex2.png" alt="Trulli" height="500">
 </figure>
 </div>
 
@@ -519,25 +488,10 @@ $\begin{aligned}
 <div class="container vertical-center">
 
 <div class="col">
-Identify the plant: 
-  $\begin{aligned}
-    \begin{cases}
-\dot{x}_m=A_m x +v_x \\\
-y_m=C x_m
-\end{cases}
-  \end{aligned}$
-<br><br>
-$\begin{aligned}
-    O&=\begin{bmatrix}
-    C \\\ CA \\\ CA^2 \\\ \vdots \\\ CA^{s-1}
-    \end{bmatrix} X_0 \\\
-    &= \Gamma X_0
-\end{aligned}$
-<br><br>
-$\begin{aligned}
-    \hat{\Gamma}=US^{1/2}\\
-    \hat{X}_0=S^{1/2}V^*
-\end{aligned}$
+<figure>
+  <img src="img/defense/braingif/comb_tot.gif" alt="Trulli"  style="border:0px;margin:0px;float:left;width:800px;">
+  <img src="img/defense/braingif/modes2.png" alt="Trulli" style="border:0px;margin:0px;float:left;width:800px;">
+</figure>
 </div>
 
 
@@ -556,126 +510,7 @@ $\begin{aligned}
 
 </section>
 
-<section>
-<h1> System Identification of Brain Wave Modes Using EEG </h1>
-<h2> Identifying linear patterns </h2>
-<style>
-.vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
 
-  display: flex;
-  align-items: center;
-}
-
-.container{
-    display: flex;
-}
-.col{
-    flex: 1;
-}
-</style>
-
-<div class="container vertical-center">
-
-<div class="col">
-Identify the plant: 
-  $\begin{aligned}
-    \begin{cases}
-\dot{x}_m=A_m x +v_x\\\
-y_m=C x_m
-\end{cases}
-  \end{aligned}$
-<br><br>
-$\begin{aligned}
-    O&=\begin{bmatrix}
-    C \\\ CA \\\ CA^2 \\\ \vdots \\\ CA^{s-1}
-    \end{bmatrix} X_0 \\\
-    &= \Gamma X_0
-\end{aligned}$
-<br><br>
-$\begin{aligned}
-    \hat{\Gamma}=U S^{1/2}\\
-    \hat{X}_0=S^{1/2}V^*
-\end{aligned}$
-</div>
-
-
-
-<div class="col">
-
-<figure>
-  <img src="img/defense/braingif/comb_tot.gif" alt="Trulli"  style="border:0px;margin:0px;float:left;width:800px;">
-  <img src="img/defense/braingif/modes2.png" alt="Trulli" style="border:0px;margin:0px;float:left;width:800px;">
-</figure>
-
-
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-<h1> System Identification of Brain Wave Modes Using EEG </h1>
-<h2> Identifying linear patterns </h2>
-<style>
-.vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
-
-  display: flex;
-  align-items: center;
-}
-
-.container{
-    display: flex;
-}
-.col{
-    flex: 1;
-}
-</style>
-
-<div class="container vertical-center">
-
-<div class="col">
-Identify the plant: 
-  $\begin{aligned}
-    \begin{cases}
-\dot{x}_m=A_m x +v_x\\\
-y_m=C x_m
-\end{cases}
-  \end{aligned}$
-<br><br>
-$\begin{aligned}
-    O&=\begin{bmatrix}
-    C \\\ CA \\\ CA^2 \\\ \vdots \\\ CA^{s-1}
-    \end{bmatrix} X_0 \\\
-    &= \Gamma X_0
-\end{aligned}$
-<br><br>
-$\begin{aligned}
-    \hat{\Gamma}=U S^{1/2}\\
-    \hat{X}_0=S^{1/2}V^*
-\end{aligned}$
-</div>
-
-
-
-<div class="col">
-
-<figure>
-  <img src="img\defense\obsv.png" height="750">
-</figure>
-
-
-
-</div>
-
-</div>
-
-</section>
 
 ---
 
@@ -685,13 +520,6 @@ $\begin{aligned}
 # 4. Modal Analysis of Brain Wave Dynamics
 
 ---
-
-<section>
-<h1> Modal Analysis of Brain Wave Dynamics </h1>
-<h2> Brain wave modes are traveling and standing </h2>
-<img class="plain" src="img/animode.gif" alt="Trial 5, Averaged" style="height:600px;">
-<img class="plain" src="img/animode2.gif" alt="Trial 5, Averaged" style="height:600px;">
-</section>
 
 
 <section>
@@ -1013,9 +841,31 @@ Error dynamics
 <section>
 <h1> Adaptive Unknown Input Estimators </h1>
 <h2> Architecture and estimator error </h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
 
 <dl>
 <dt>ASD plant dynamics</dt>
+  <dd>`$A_c^* P + P A_c = -Q$`</dd>
+  <dd>`$PB=C^*$`</dd>
 <dt>Bounded `$L_{*}$`, $v$, and $\gamma_e$</dt>
 <dt>Error in state and input converges to an n-ball centered at zero</dt>
   <dd>`$V(e,\Delta L) = \frac{1}{2} e^* \bar{P} e + \frac{1}{2} \text{tr}(\Delta L \gamma_e^{-1} \Delta L^*)$`</dd>
@@ -1024,16 +874,89 @@ Error dynamics
 
 
 
+</div>
 
 
 
+<div class="col">
 
 <figure>
-  <img src="img/defense/x_ex2.gif" alt="Trulli" height="400">
-  <img src="img/defense/u_ex3.gif" alt="Trulli" height="400">
+  <img src="img/defense/neighborhood-1.png" alt="Trulli" height="400">
 </figure>
 
+
+
+
+</div>
+</div>
+
 </section>
+
+
+<section>
+<h1> Illustrative example</h1>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+\begin{align}
+\dot{x}&=A_m x+Bu +v_x\\\
+&=\begin{bmatrix}
+-4 &1 &2\\\
+-1 & -1 & 1\\\
+-1 & 1 &-1 
+\end{bmatrix}x+B u +v_x \\\
+y&=Cx
+\end{align}
+<br>
+<figure>
+  <h4> Internal state error time series</h4>
+  <img src="img/defense/x_ex2.gif" alt="Trulli" height="400">
+</figure>
+</div>
+
+
+
+<div class="col">
+\begin{align}
+\dot{x}&=A x+Bu +v_x\\\
+&=\begin{bmatrix}
+-2.86 &1 &4.7\\\
+1.8 & -1 & 6.7\\\
+-9 & 1 &-1 7.2
+\end{bmatrix}x+B u +v_x\\\
+y&=Cx
+\end{align}
+<br>
+<figure>
+  <h4> Estimating the unknown input</h4>
+  <img src="img/defense/u_ex3.gif" alt="Trulli" height="400">
+</figure>
+</div>
+
+</div>
+
+
+</section>
+
+
+
 
 ---
 
@@ -1116,7 +1039,7 @@ Recall: Solving the nonstationary problem
 
 <h3> aUIO on unseen data </h3>
 <figure>
-  <img src="img/defense/square_L.gif" alt="Trulli" height="750">
+  <img src="img/defense/Ly_ex.gif" alt="Trulli" height="600">
 </figure>
 </div>
 
@@ -1126,7 +1049,7 @@ Recall: Solving the nonstationary problem
 
 <h3> Adaptive gain matrix 2-norm </h3>
 <figure>
-  <img src="img/defense/Ly.gif" alt="Trulli" height="750">
+  <img src="img/defense/Ly2.gif" alt="Trulli" height="600">
 </figure>
 
 
@@ -1134,6 +1057,9 @@ Recall: Solving the nonstationary problem
 </div>
 
 </div>
+
+
+
 </section>
 
 <section>
@@ -1284,67 +1210,7 @@ Recall: Solving the nonstationary problem
 
 </section>
 
-<section>
-<h1> Reconstructing the Brain's Unknown Input </h1>
-<h2> Classification validation </h2>
-<style>
-.vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
 
-  display: flex;
-  align-items: center;
-}
-
-.container{
-    display: flex;
-}
-.col{
-    flex: 1;
-}
-</style>
-
-<div class="container vertical-center">
-
-<div class="col">
-<table style="width:80%">
-  <tr>
-    <th>Task</th>
-    <th>aUIO Acc. [%]</th>
-    <th>PSD CNN Acc. [%]</th>
-  </tr>
-  <tr>
-    <td>DEAP Valence</td>
-    <td>77.8</td>
-    <td>68.1</td>
-  </tr>
-  <tr>
-    <td>DEAP Arousal</td>
-    <td>75.2</td>
-    <td>63.8</td>
-  </tr>
-  <tr>
-    <td>Like/Dislike</td>
-    <td>79.4</td>
-    <td>67.3</td>
-  </tr>
-  <tr>
-</table>
-
-
-</div>
-
-<div class="col">
-<h3> Static gain grid search </h3>
-<figure>
-  <img src="img/defense/DEAP_accs.png" alt="Trulli" height="600">
-</figure>
-
-
-</div>
-
-</div>
-</section>
 
 ---
 
@@ -1512,7 +1378,131 @@ Recall: Solving the nonstationary problem
 <!-- .slide: data-background="#500000" class="dark" -->
 # A Modal Approach to the Space Time Dynamics of Cognitive Biomarkers
 
-> Highly organized research is guaranteed to produce nothing new.
+> The willow submits to the wind and prospers until one day it is many willows - a wall against the wind.
+
+---
+
+<section>
+<h1> Reconstructing the Brain's Unknown Input </h1>
+<h2> Classification validation </h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+<table style="width:80%">
+  <tr>
+    <th>Task</th>
+    <th>aUIO Acc. [%]</th>
+    <th>PSD CNN Acc. [%]</th>
+  </tr>
+  <tr>
+    <td>DEAP Valence</td>
+    <td>77.8</td>
+    <td>68.1</td>
+  </tr>
+  <tr>
+    <td>DEAP Arousal</td>
+    <td>75.2</td>
+    <td>63.8</td>
+  </tr>
+  <tr>
+    <td>Like/Dislike</td>
+    <td>79.4</td>
+    <td>67.3</td>
+  </tr>
+  <tr>
+</table>
+
+
+</div>
+
+<div class="col">
+<h3> Static gain grid search </h3>
+<figure>
+  <img src="img/defense/DEAP_accs.png" alt="Trulli" height="600">
+</figure>
+
+
+</div>
+
+</div>
+</section>
+
+<section>
+<h1> System Identification of Brain Wave Modes Using EEG </h1>
+<h2> Identifying linear patterns </h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+Identify the plant: 
+  $\begin{aligned}
+    \begin{cases}
+\dot{x}_m=A_m x +v_x\\\
+y_m=C x_m
+\end{cases}
+  \end{aligned}$
+<br><br>
+$\begin{aligned}
+    O&=\begin{bmatrix}
+    C \\\ CA \\\ CA^2 \\\ \vdots \\\ CA^{s-1}
+    \end{bmatrix} X_0 \\\
+    &= \Gamma X_0
+\end{aligned}$
+<br><br>
+$\begin{aligned}
+    \hat{\Gamma}=U S^{1/2}\\
+    \hat{X}_0=S^{1/2}V^*
+\end{aligned}$
+</div>
+
+
+
+<div class="col">
+
+<figure>
+  <img src="img\defense\obsv.png" height="750">
+</figure>
+
+
+
+</div>
+
+</div>
+
+</section>
 
 ---
 
