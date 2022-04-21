@@ -128,12 +128,7 @@
 <div class="container vertical-center">
 
 <div class="col">
- <ul>
-  <li>EEG is only loosely tied to outcomes</li>
-  <li>Linear, nonlinear, and noise</li>
-  <li>Channel cross talk</li>
-  <li>Variety of referencing techniques</li>
-</ul> 
+
 <img src="img/defense/EEG1020_ref_crop.png" alt="Trulli" height="500">
   <figcaption> Longitudinal referencing </figcaption>
 </div>
@@ -151,7 +146,7 @@
 ---
 
 <section>
-<h1> A cannonical approach: </h1>
+<h1> A canonical approach: </h1>
 <br>
 <img src="img/defense/eeg_ex.png" alt="Trulli" height="400">
 <br>
@@ -829,8 +824,7 @@ Recover $A$ with adaptive scheme
 <br>
 Error dynamics
 
-`$$ \dot{e}=(\bar{A}+\bar{K} \bar{C})e+\bar{B}w + v $$`
-`$$ \begin{bmatrix} \dot{e}_x \\\ \dot{e}_z \end{bmatrix} = \Big(\begin{bmatrix} A_m & B \Theta_u \\\ 0 & F_u \end{bmatrix} + \begin{bmatrix} K_x \\\ K_u \end{bmatrix} \begin{bmatrix} C & 0 \end{bmatrix} \Big) \begin{bmatrix} e_x \\\ e_z \end{bmatrix} +\begin{bmatrix} B \\\ 0 \end{bmatrix} w +\begin{bmatrix} v_x \\\ v_u \end{bmatrix}$$`
+`$$ \dot{e}=(\bar{A}+\bar{K} \bar{C})e+\bar{B} \underbrace{\Delta L y}_\text{$w$} + v $$`
 `$$ \begin{bmatrix} \dot{e}_x \\\ \dot{e}_z \end{bmatrix} = \underbrace{\begin{bmatrix} A_m+K_x C & B \Theta_u \\\ K_u C & F_u \end{bmatrix}}_\text{$\bar{A}_c$} \begin{bmatrix} e_x \\\ e_z \end{bmatrix} +\begin{bmatrix} B \\\ 0 \end{bmatrix} w +\begin{bmatrix} v_x \\\ v_u \end{bmatrix}$$`
 
 
@@ -867,7 +861,7 @@ Error dynamics
   <dd>`$A_c^* P + P A_c = -Q$`</dd>
   <dd>`$PB=C^*$`</dd>
 <dt>Bounded `$L_{*}$`, $v$, and $\gamma_e$</dt>
-<dt>Error in state and input converges to an n-ball centered at zero</dt>
+<dt>Error in state and input converges to an neighborood centered at zero</dt>
   <dd>`$V(e,\Delta L) = \frac{1}{2} e^* \bar{P} e + \frac{1}{2} \text{tr}(\Delta L \gamma_e^{-1} \Delta L^*)$`</dd>
   <dd>`$\lim_{t \rightarrow \infty} \sup ||e(t)|| \leq \frac{1+\sqrt{\lambda_{\text{max}}\bar{P}}}{\alpha \sqrt{\lambda_{\text{min}}\bar{P}}} M_v \equiv R^*$`</dd>
 </dl> 
@@ -1206,6 +1200,9 @@ Recall: Solving the nonstationary problem
 </div>
 
 </div>
+<figure>
+  <img src="img/defense/energy.png" alt="Trulli" height="200">
+</figure>
 <div style="text-align: right"> <sub><sub><sup><a href="https://dl.acm.org/doi/10.5555/3297863.3297883">CNN1</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0010482521005515">CNN2</a>, <a href="https://www.frontiersin.org/articles/10.3389/fnbot.2020.617531/full">MFDF</a></sup></sup></sub></div>
 
 </section>
