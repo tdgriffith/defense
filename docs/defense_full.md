@@ -54,8 +54,7 @@
 
 # Novel potential
 
->  There has been a recent proliferation of more rugged and durable sensor devices (e.g., fNIRS sensors) that can be used while people take part in ecologically valid activities to assess changes in neurophysiology, physiology, and behavior that correlate with cognitive state. In addition, recent advances in machine learning and modeling techniques can be used to interpret information about human states (e.g., SA) from noisy data acquired in such environments that previously was unusable.
-
+<img src="https://pbs.twimg.com/media/E2LX-5-VIAAwlDp?format=jpg&name=4096x4096" alt="Trulli" height="500">
 
 
 <div style="text-align: right"> <small>Bracken, B., Tobyne, S., Winder, A., Shamsi, N., & Endsley, M. R. (2021, July). Can Situation Awareness Be Measured Physiologically?. In International Conference on Applied Human Factors and Ergonomics (pp. 31-38). Springer, Cham.</small></div>
@@ -75,7 +74,8 @@
 # State of the art: surveys and orthogonal bases
 
 
-> Recent modeling work, however, using large-scale dynamical models on the human connectome, suggests that cortical flow patterns are multistable and exhibit phase-transitions. To study such phenomena, a dynamic analysis in which no assumptions about stationarity are made, is required.
+<img src="https://raphaelvallat.com/images/tutorials/bandpower/brain_waves.png" alt="Trulli" height="500">
+
 
 
 
@@ -299,26 +299,7 @@ accepting the uncertainty in $A_m$.
 <section>
 <h1> System Identification of Brain Wave Modes Using EEG </h1>
 <h2> Identifying linear patterns </h2>
-<style>
-.vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
 
-  display: flex;
-  align-items: center;
-}
-
-.container{
-    display: flex;
-}
-.col{
-    flex: 1;
-}
-</style>
-
-<div class="container vertical-center">
-
-<div class="col">
 
 Identify the plant: 
   $\begin{aligned}
@@ -327,24 +308,11 @@ Identify the plant:
 y_m=C x_m 
 \end{cases}
   \end{aligned}$
-  <br><br>
-  <h3> Considered algorithms </h3>
- <ul>
-  <li><strong><em>OMA</em></strong></li>
-  <li>NeXT-ERA</li>
-  <li>n4sid</li>
-  <li>DMD</li>
-</ul> 
-</div>
 
-<div class="col">
 
 <figure>
-  <img src="img/defense/modal_out.png" alt="Trulli" height="500">
+  <img src="img/defense/modal_out2.png" alt="Trulli" height="500">
 </figure>
-</div>
-
-</div>
 
 </section>
 
@@ -519,7 +487,7 @@ $\begin{aligned}
 
 <section>
 <h1> Modal Analysis of Brain Wave Dynamics </h1>
-<h2> Brain wave modes are traveling and standing </h2>
+<h2> Brain wave modes are standing and traveling </h2>
 <img class="plain" src="img\defense\braingif\standing.gif" alt="Trial 5, Averaged" style="height:600px;">
 <img class="plain" src="img\defense\braingif\traveling.gif" alt="Trial 5, Averaged" style="height:600px;">
 </section>
@@ -1200,9 +1168,6 @@ Recall: Solving the nonstationary problem
 </div>
 
 </div>
-<figure>
-  <img src="img/defense/energy.png" alt="Trulli" height="200">
-</figure>
 <div style="text-align: right"> <sub><sub><sup><a href="https://dl.acm.org/doi/10.5555/3297863.3297883">CNN1</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0010482521005515">CNN2</a>, <a href="https://www.frontiersin.org/articles/10.3389/fnbot.2020.617531/full">MFDF</a></sup></sup></sub></div>
 
 </section>

@@ -16,6 +16,8 @@
 - Historically simulation questionnaire
 - Sensors and modeling moving towards physiological measures of human state/cognition
 
+>  There has been a recent proliferation of more rugged and durable sensor devices (e.g., fNIRS sensors) that can be used while people take part in ecologically valid activities to assess changes in neurophysiology, physiology, and behavior that correlate with cognitive state. In addition, recent advances in machine learning and modeling techniques can be used to interpret information about human states (e.g., SA) from noisy data acquired in such environments that previously was unusable.
+
 ---
 
 ### Cognition is the black box
@@ -26,6 +28,8 @@
 ---
 
 ### State of the art
+> Recent modeling work, however, using large-scale dynamical models on the human connectome, suggests that cortical flow patterns are multistable and exhibit phase-transitions. To study such phenomena, a dynamic analysis in which no assumptions about stationarity are made, is required.
+
 - Nonstationary signals make the ***dynamics*** tricky
 - Phase and traveling waves
 - This work seeks a method to address in engineering dynamics terms 
@@ -95,7 +99,7 @@ With that overview, how do we extract that first step, the linear operating poin
 ### OMA theory
 - A discrete time plant looks like this
 - If we knew size of C and initial condition... 
-- So we vary the size and check SVD
+- ***LEFT AND RIGHT SINGULAR VECTORS***
     - ***FILLING IN THE DISTRIBUTION***
 
 ### Truncation
