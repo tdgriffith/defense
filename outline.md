@@ -44,6 +44,7 @@ What we're not saying:
 
 What we are saying
 - Beam and atoms vs. brain waves and neurons
+- You can measure this dynamic signal and say something engineering about the system
 
 ---
 
@@ -201,3 +202,8 @@ we've got a problem. address with full architecture
 
 --- 
 # Ack
+
+Error dynamics
+
+`$$ \dot{e}=(\bar{A}+\bar{K} \bar{C})e+\bar{B} \underbrace{\Delta L y}_\text{$w$} + v $$`
+`$$ \begin{bmatrix} \dot{e}_x \\\ \dot{e}_z \end{bmatrix} = \underbrace{\begin{bmatrix} A_m+K_x C & B \Theta_u \\\ K_u C & F_u \end{bmatrix}}_\text{$\bar{A}_c$} \begin{bmatrix} e_x \\\ e_z \end{bmatrix} +\begin{bmatrix} B \\\ 0 \end{bmatrix} w +\begin{bmatrix} v_x \\\ v_u \end{bmatrix}$$`

@@ -17,97 +17,14 @@
 ### 3. System Identification of Brain Wave Modes Using EEG
 ### 4. Modal Analysis of Brain Wave Dynamics
 ### 5. Adaptive Unknown Input Estimators
-### 6. Reconstructing the Brain's Unknown Input
+### 6. Reconstructing the Unknown Input Using EEG
 ### 7. Conclusions 
 
 
 ---
 
 <!-- .slide: data-background="#ffffff" class="light" -->
-# 1. Introduction & Motivation
-<style>
-.container{
-    display: flex;
-}
-.col{
-    flex: 1;
-}
-</style>
-
-<div class="container">
-
-<div class="col">
-<img src="img/defense/paradigm1.png" alt="Trulli" height="500">
-<figcaption> The computer as part of the system </figcaption>
-</div>
-
-<div class="col">
-<img src="img/defense/paradigm2.png" alt="Trulli" height="500">
-  <figcaption> The computer as a teaming member </figcaption>
-</div>
-
-</div>
-
----
-
-<!-- .slide: data-background="#ffffff" class="light" -->
-
-# Novel potential
-
-<img src="https://pbs.twimg.com/media/E2LX-5-VIAAwlDp?format=jpg&name=4096x4096" alt="Trulli" height="500">
-
-
-<div style="text-align: right"> <small>Bracken, B., Tobyne, S., Winder, A., Shamsi, N., & Endsley, M. R. (2021, July). Can Situation Awareness Be Measured Physiologically?. In International Conference on Applied Human Factors and Ergonomics (pp. 31-38). Springer, Cham.</small></div>
-
----
-
-
-# Cognition as a black box
-<div class="col">
-<img src="img/defense/black_box.png" alt="Trial 5, Averaged" width="80%">
-</div>
-
----
-
-<!-- .slide: data-background="#ffffff" class="light" -->
-
-# State of the art: surveys and orthogonal bases
-
-
-<img src="https://raphaelvallat.com/images/tutorials/bandpower/brain_waves.png" alt="Trulli" height="500">
-
-
-
-
-
-<div style="text-align: right"> <small>Hindriks, Rikkert, et al. "Latency analysis of resting-state BOLD-fMRI reveals traveling waves in visual cortex linking task-positive and task-negative networks." Neuroimage 200 (2019): 259-274.</small></div>
-
----
-
-<!-- .slide: data-background="#ffffff" class="light" -->
-
-<div class="col">
-<img src="img/defense/guardrails.jpg" alt="Trial 5, Averaged" width="80%">
-</div>
-
-<div style="text-align: right"> <sub><sub><sup><a href="https://unsplash.com/@hogarthd">Hogarth de la Plante</a>, Unsplash</sup></sup></sub></div>
-
----
-
-
-
-
-
-
-<!-- .slide: data-background="#003C71" class="dark" -->
-
-# 2. A Dynamic Systems View of Brain Waves
-
-
----
-
-<section>
-<h1> Characteristics of EEG </h1>
+# Modern systems demands bi-directional flow of information
 <style>
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
@@ -128,31 +45,188 @@
 <div class="container vertical-center">
 
 <div class="col">
+ <ul style="font-size:2vw">
+  <li>Modern systems feature humans as supervisors, not sole actors</li>
+  <ul>
+  <li>Teaming becomes important for safety and performance</li>
+</ul> 
+  <li>Comparatively less research analyzes the information flow from human to computer.</li>
+  <li> <strong> This work investigates the use of canonical engineering principles for estimation of human state/cognition.</strong></li>
+</ul> 
+</div>
 
-<img src="img/defense/EEG1020_ref_crop.png" alt="Trulli" height="500">
-  <figcaption> Longitudinal referencing </figcaption>
+<div class="col">
+<img src="img/defense/paradigm1.png" alt="Trulli" height="300">
+<figcaption> The computer as part of the system </figcaption>
+<img src="img/defense/paradigm2.png" alt="Trulli" height="300">
+  <figcaption> The computer as a teaming member </figcaption>
+</div>
+
+
+</div>
+
+
+---
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+# Hardware and experimental design an be used to interpret information about human states from noisy physiological data.
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+ <ul style="font-size:2vw">
+  <li>Physiological signals are historically not portable</li>
+  <ul>
+  <li>Prevented ecologically valid experiments</li>
+</ul> 
+  <li>Human state (e.g. SA) reduced to discrete self reports</li>
+  <li> <strong> There is new potential for modeling techniques to interpret human state estimation from noisy physiological signals.</strong></li>
+</ul> 
+</div>
+
+<div class="col">
+<img src="https://pbs.twimg.com/media/E2LX-5-VIAAwlDp?format=jpg&name=4096x4096" alt="Trulli" height="500">
+<figcaption> Time Domain fNIRS from 
+<a href="https://www.kernel.com/products">Kernel Flow</a> </figcaption>
+</div>
+
+
+</div>
+
+
+
+
+---
+
+
+# Cognition as a black box
+<div class="col">
+<img src="img/defense/black_box.png" alt="Trial 5, Averaged" width="80%">
+</div>
+- Cognition gives rise to EEG signals
+  - but it is ***noisy*** and only ***loosely*** correlated with cognition
+- Cellular activity can only be measured invasively 
+- **Can we say something about cognition from dynamic EEG signals**?
+
+
+---
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+# Nonstationary, nonlinear signals make the ***dynamics*** tricky
+
+- Historically, 
+  - stationary analysis is used with a sliding window
+  - or case by case highly derived models are developed
+- This work seeks a method to address in engineering dynamics terms 
+    - with eye towards cognitive outcomes
+    - because there are many existing analytical tools in engineering dynamics
+
+> a dynamic analysis in which no assumptions about stationarity are made, is required.
+
+
+
+
+<div style="text-align: right"> <small>Hindriks, Rikkert, et al. "Latency analysis of resting-state BOLD-fMRI reveals traveling waves in visual cortex linking task-positive and task-negative networks." Neuroimage 200 (2019): 259-274.</small></div>
+
+---
+
+<!-- .slide: data-background="#ffffff" class="light" -->
+
+# Guardrails: This is not a model of the brain!
+## but you can measure EEG signals and say something about the system
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+ <ul style="font-size:2vw">
+  <li>Engineering mechanics does not require atomic level analysis to evaluate stress and strain.</li>
+  <ul>
+  <li>Can we extend this analogy to spatio-temporal dynamics of human cognition?</li>
+</ul> 
+</ul> 
 </div>
 
 <div class="col">
 <figure>
-  <img src="img/defense/channels_independent.png" alt="Trulli" height="500">
-    <figcaption>EEG channel pair plots</figcaption>
+<img src="https://static-01.hindawi.com/articles/ddns/volume-2015/542507/figures/542507.fig.003a.svgz" alt="Trial 5, Averaged" width="35%"> 
+<img src="img/defense/right_arrow2.png" alt="Trial 5, Averaged" width="5%">
+<img src="https://i0.wp.com/wtt.pauken.org/wp-content/uploads/2011/10/mode03.gif?ssl=1" alt="Trial 5, Averaged" width="25%">
+<img src="img/defense/plus.png" alt="Trial 5, Averaged" width="5%">
+<img src="https://i0.wp.com/wtt.pauken.org/wp-content/uploads/2011/10/mode22.gif?resize=400%2C300&ssl=1" alt="Trial 5, Averaged" width="25%">
+<figcaption>Surface recordings of membranes yield useful engineering information.</figcaption>
+</figure>
+<figure>
+<img src="https://static-01.hindawi.com/articles/jam/volume-2014/261347/figures/261347.fig.005c.jpg" alt="Trial 5, Averaged" width="45%">
+<img src="img/defense/right_arrow2.png" alt="Trial 5, Averaged" width="5%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Question_Mark.svg/1280px-Question_Mark.svg.png" alt="Trial 5, Averaged" width="30%">
+<figcaption>Is this notion relevant to brain waves?</figcaption>
 </figure>
 </div>
 
+
+
 </div>
-</section>
+
+<div style="text-align: right"> <small><a href="https://wtt.pauken.org/chapter-2/membrane-modes-2/9">2D membrane modes</a> </small></div>
+
+
+---
+
+
+
+
+
+
+<!-- .slide: data-background="#003C71" class="dark" -->
+
+# 2. A Dynamic Systems View of Brain Waves
+
+
 
 ---
 
 <section>
 <h1> A canonical approach: </h1>
 <br>
-<img src="img/defense/eeg_ex.png" alt="Trulli" height="400">
+<img src="img/defense/eeg_ex2.png" alt="Trulli" height="400">
 <br>
 :arrow_double_down:
 <br>
-True brain wave plant: 
+Linearized brain wave plant: 
   $\begin{aligned}
     \begin{cases}
     \dot{x}=Ax+Bu +v_x \\\
@@ -160,7 +234,10 @@ True brain wave plant:
     \end{cases}
   \end{aligned}$
 <br>
-where $A, \ B, \ C, \ v_x, \ x, \text{and} \ u $ are ***all unknown***.
+<h2> linearization is ***around an operating point*** </h2>
+<br>
+but $A, \ B, \ C, \ v_x, \ x, \text{and} \ u $ are all unknown.
+
 
 </section>
 
@@ -181,111 +258,25 @@ accepting the uncertainty in $A_m$.
 </section>
 
 <section>
-<h2> Treating nonlinear effects </h2>
-<style>
-.vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
-
-  display: flex;
-  align-items: center;
-}
-
-.container{
-    display: flex;
-}
-.col{
-    flex: 1;
-}
-</style>
-
-<div class="container vertical-center">
-
-<div class="col">
-
+<h2> A modal transformation yields a discrete set of spatio-temporal modes which are useful for brain wave analysis and mapping </h2>
 <figure>
-  <img src="img/defense/nonlin1.PNG" alt="Trulli" height="100">
+  <img src="http://www.svibs.com/resources/ARTeMIS_Modal_Help_v3/images/ModalDecomposition.png" alt="Trulli" height="350">
 </figure>
-<figure>
-  <img src="img/defense/nonlin2.PNG" alt="Trulli" height="100">
-</figure>
-<figure>
-  <img src="img/defense/nonlin3.PNG" alt="Trulli" height="100">
-</figure>
-</div>
-
-<div class="col">
-
-<h3> Adaptive Unknown Input Brain Wave Estimator: </h3>
-
-  $\begin{aligned}
-    \begin{cases} 
-      \dot{\hat{x}}=\big(A_m+BL(t)C\big) \hat{x} + B\hat{u} + K_x e_y; \\\
-      \hat{y}= C \hat{x}.
-    \end{cases} 
-  \end{aligned}$
-</div>
-</div>
-
-
-</section>
-
-<section>
-<h2> Modes elegantly capture the spatio-temporal dynamics </h2>
-
-<style>
-.vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
-
-  display: flex;
-  align-items: center;
-}
-
-.container{
-    display: flex;
-}
-.col{
-    flex: 1;
-}
-</style>
-
-<div class="container vertical-center">
-
-<div class="col">
-<h4> True brain wave plant </h4>
-  $\begin{aligned}
-    \begin{cases}
-    \dot{x}=Ax+Bu +v_x \\\
-    y=C x
-    \end{cases}
-  \end{aligned}$
-<br>
-:arrow_double_down:
-<h4> Modal brain wave plant </h4>
-  $\begin{aligned}
-    \begin{cases}
-    \dot{\eta}=\Lambda \eta +V^{-1}B u + V^{-1} v_x \\\
-    y=CV \eta
-    \end{cases}
-  \end{aligned}$
-</div>
-
-
-
-<div class="col">
-<h3> Some important analytical properties: </h3>
 
  <ul>
-  <li>Frequency</li>
-  <li>Damping</li>
-  <li>Mode shape</li>
-  <li>Complexity</li>
+  <li>A giant $(A,C)$ may not be useful!</li>
+  <li>Modes have:</li>
+  <ul>
+  <li>Frequency ($f$)</li>
+  <li>Damping ($\zeta$)</li>
+  <li>Mode shape ($\phi$)</li>
+  <li>Complexity ($\%$)</li>
 </ul> 
-</div>
+  <li>Modal dynamics are equivalent to original model</li>
+</ul> 
 
-</div>
 </section>
+
 
 ---
 
@@ -297,28 +288,82 @@ accepting the uncertainty in $A_m$.
 
 <!-- .slide: data-background="#ffffff" class="light" -->
 <section>
-<h1> System Identification of Brain Wave Modes Using EEG </h1>
-<h2> Identifying linear patterns </h2>
+<h1> Datasets considered</h1>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+<h2> DEAP: A Database for Emotion Analysis using Physiological Signals </h2>
+<figure>
+  <img src="img/defense/val_arou.jpg" alt="Trulli" height="400">
+</figure>
+ <ul>
+  <li>32 sensors</li>
+  <li>32 subjects watch 40 videos</li>
+  <li>Subjects self report Valence and Arousal</li>
+</ul> 
+</div>
 
 
-Identify the plant: 
-  $\begin{aligned}
-    \begin{cases}
-\dot{x}_m=A_m x +v_x\\\
-y_m=C x_m 
-\end{cases}
-  \end{aligned}$
+
+<div class="col">
+
+<h2> Neuropsychoimaging of Addiction and Related Conditions Dataset </h2>
+<figure>
+  <img src="https://www.ncbi.nlm.nih.gov/pmc/articles/instance/3463641/bin/nihms-386132-f0003.jpg" alt="Trulli" height="400">
+</figure>
+ <ul>
+  <li>60 sensors</li>
+  <li>100 subjects at rest state</li>
+  <li>Subjects self report craving scale</li>
+</ul> 
+</div>
+
+
+</div>
+<br>
+<div style="text-align: right"> <small><small>Koelstra, Sander, et al. "Deap: A database for emotion analysis; using physiological signals." IEEE transactions on affective computing 3.1 (2011): 18-31.</small></small></div>
+<div style="text-align: right"> <small><small>Konova, Anna B., et al. "Structural and behavioral correlates of abnormal encoding of money value in the sensorimotor striatum in cocaine addiction." European Journal of Neuroscience 36.7 (2012): 2979-2988.</small></small></div>
+
+</section>
+
+<section>
+<h1> Output only modal analysis is well suited to the analysis of EEG waves</h1>
+ <ul>
+  <li>OMA (stochastic, zero mean)</li>
+  <li>DMD (deterministic, full state)</li>
+  <li>NeXT (deterministic, modal)</li>
+  <li>N4SID (stochastic, Kalman states)</li>
+</ul> 
 
 
 <figure>
   <img src="img/defense/modal_out2.png" alt="Trulli" height="500">
+  <figcaption>Bivariate distribution of identified modes in DEAP dataset</figcaption>
 </figure>
 
 </section>
 
+
+
 <section>
-<h1> System Identification of Brain Wave Modes Using EEG </h1>
-<h2> Identifying linear patterns </h2>
+<h1> Between 40 and 50 modes are needed for brain wave modeling </h1>
 <style>
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
@@ -358,13 +403,15 @@ $\begin{aligned}
     \hat{\Gamma}=US^{1/2}\\
     \hat{X}_0=S^{1/2}V^*
 \end{aligned}$
+<h3> Observability is so important! </h3>
 </div>
 
 
 
 <div class="col">
 <figure>
-  <img src="img/defense/max_order.jpg" alt="Trulli" height="600">
+  <img src="img/defense/truncate_ex3.png" alt="Trulli" height="500">
+  <figcaption>The singular values (i.e. importance) of each mode rolls off after 50 modes.</figcaption>
 </figure>
 </div>
 
@@ -373,8 +420,8 @@ $\begin{aligned}
 </section>
 
 <section>
-<h1> System Identification of Brain Wave Modes Using EEG </h1>
-<h2> Identifying linear patterns </h2>
+<h1> Modal superposition recreates the measured data </h1>
+<h2> Example from Mt. Sinai CUD database </h2>
 <style>
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
@@ -395,66 +442,14 @@ $\begin{aligned}
 <div class="container vertical-center">
 
 <div class="col">
-Identify the plant: 
-  $\begin{aligned}
-    \begin{cases}
-\dot{x}_m=A_m x +v_x\\\
-y_m=C x_m 
-\end{cases}
-  \end{aligned}$
-<br><br>
-$\begin{aligned}
-    O&=\begin{bmatrix}
-    C \\\ CA_m \\\ CA_m^2 \\\ \vdots \\\ CA_m^{s-1}
-    \end{bmatrix} X_0 \\\
-    &= \Gamma X_0
-\end{aligned}$
-<br><br>
-$\begin{aligned}
-    \hat{\Gamma}=US^{1/2}\\
-    \hat{X}_0=S^{1/2}V^*
-\end{aligned}$
-</div>
 
-
-
-<div class="col">
 <figure>
-  <img src="img/defense/truncate_ex2.png" alt="Trulli" height="500">
+  <img src="img/defense/braingif/comb_tot.gif" alt="Trulli"  style="border:0px;margin:-10px;float:inherit;width:800px;">
+  <img src="img/defense/braingif/modes2.png" alt="Trulli" style="border:0px;margin:0px;float:inherit;width:800px;">
+    <figcaption>Example mode from Mt. Sinai data: (`$f=23$` hz, `$\zeta = 0.12$`, `$C_r = 22\%$`) </figcaption>
 </figure>
-</div>
 
-</div>
 
-</section>
-
-<section>
-<h1> System Identification of Brain Wave Modes Using EEG </h1>
-<h2> Identifying linear patterns </h2>
-<style>
-.vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
-
-  display: flex;
-  align-items: center;
-}
-
-.container{
-    display: flex;
-}
-.col{
-    flex: 1;
-}
-</style>
-
-<div class="container vertical-center">
-
-<div class="col">
-<figure>
-  <img src="img/defense/braingif/comb_tot.gif" alt="Trulli"  style="border:0px;margin:0px;float:left;width:800px;">
-  <img src="img/defense/braingif/modes2.png" alt="Trulli" style="border:0px;margin:0px;float:left;width:800px;">
-</figure>
 </div>
 
 
@@ -462,7 +457,8 @@ $\begin{aligned}
 <div class="col">
 
 <figure>
-  <img src="img/defense/superposemodes.gif" alt="Trulli" height="600">
+  <img src="img/defense/superposemodes.gif" alt="Trulli" style="border:0px;margin:0px;float:inherit;height:600px;">
+  <figcaption> A single channel example of how modes superpose to recreate the observed EEG data. </figcaption>
 </figure>
 
 
@@ -486,63 +482,7 @@ $\begin{aligned}
 
 
 <section>
-<h1> Modal Analysis of Brain Wave Dynamics </h1>
-<h2> Brain wave modes are standing and traveling </h2>
-<img class="plain" src="img\defense\braingif\standing.gif" alt="Trial 5, Averaged" style="height:600px;">
-<img class="plain" src="img\defense\braingif\traveling.gif" alt="Trial 5, Averaged" style="height:600px;">
-</section>
-
-
-
-<section>
-<h1> Modal Analysis of Brain Wave Dynamics </h1>
-<h2> Some brain wave modes are task independent </h2>
-<img class="plain" src="img/common1.gif" alt="Trial 5, Averaged" style="height:450px;">
-<img class="plain" src="img/common2.gif" alt="Trial 5, Averaged" style="height:450px;">
-
-<table style="width:100%">
-  <tr>
-    <th> </th>
-    <th>Frequency</th>
-    <th>Damping [%]</th>
-    <th>Complexity [%] </th>
-    <th>Shape Correl.</th>
-  </tr>
-  <tr>
-    <td>Alpha Mode 1 </td>
-    <td> $4.34\pm 0.03$ </td>
-    <td> $8.20\pm 1.20$ </td>
-    <td> $11.47\pm 17.59$ </td>
-    <td> $0.97 \pm 0.016$ </td>
-  </tr>
-  <tr>
-    <td>Beta Mode 2 </td>
-    <td> $21.83 \pm 0.22$ </td>
-    <td> $1.98 \pm 2.63$ </td>
-    <td> $32.29 \pm 35.67$ </td>
-    <td> $0.96 \pm 0.018$ </td>
-  </tr>
-  <tr>
-    <td>Gamma Mode 3 </td>
-    <td> $40.39\pm 0.26$ </td>
-    <td> $11.87 \pm 7.49$ </td>
-    <td> $12.42 \pm 16.88$ </td>
-    <td> $0.99 \pm 0.010$ </td>
-  </tr>
-  <tr>
-    <td>Gamma Mode 4 </td>
-    <td> $44.19 \pm 0.24$ </td>
-    <td> $2.52\pm 1.39$ </td>
-    <td> $2.93\pm 5.69$ </td>
-    <td> $0.99 \pm 0.012$ </td>
-  </tr>
-</table>
-</section>
-
-
-<section>
-<h1> Modal Analysis of Brain Wave Dynamics </h1>
-<h2> Brain wave modes are interindividual </h2>
+<h1> Brain wave modes can be standing or traveling </h1>
 <style>
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
@@ -563,43 +503,140 @@ $\begin{aligned}
 <div class="container vertical-center">
 
 <div class="col">
-<img class="plain" src="img\confmat.jpg" alt="Trial 5, Averaged" style="height:800px;">
+
+<figure>
+  <img src="img\defense\braingif\standing.gif" alt="Trial 5, Averaged" style="height:500px;">
+  <figcaption> An example standing wave (`$C_r=5\%$`) from the Mt. Sinai database. Standing waves are most prevalent in rest conditions.</figcaption>
+</figure>
+
+
 </div>
 
 
 
 <div class="col">
 
-<table style="width:100%">
+<figure>
+  <img src="img\defense\braingif\traveling.gif" alt="Trial 5, Averaged" style="height:500px;">
+  <figcaption> An example traveling wave (`$C_r=83\%$`) from the Mt. Sinai database. Traveling waves are most prevalent in active conditions.</figcaption>
+</figure>
+
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section>
+<h1> Humans share certain modes</h1>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+
+<figure>
+  <img src="img/common1.gif" alt="Trial 5, Averaged" style="height:500px;">
+  <figcaption> Alpha Mode 1 from Subject 19, Trial 6 in the DEAP database. </figcaption>
+</figure>
+
+
+</div>
+
+
+
+<div class="col">
+
+<figure>
+  <img src="img/common1.gif" alt="Trial 5, Averaged" style="height:500px;">
+  <figcaption> Alpha Mode 1 from Subject 19, Trial 20 in the DEAP database. </figcaption>
+</figure>
+
+
+
+</div>
+
+</div>
+<br>
+<h4> Common mode frequencies are aligned with the Rest State Network</h4>
+ <ul>
+  <li>Alpha Mode 1: `$4.34\pm 0.03$`</li>
+  <li>Beta Mode 2: `$21.83 \pm 0.22$`</li>
+  <li>Gamma Mode 3: `$40.39\pm 0.26$`</li>
+  <li>Gamma Mode 4: `$44.19 \pm 0.24$`</li>
+</ul> 
+
+</section>
+
+
+<section>
+<h1> Brain wave modes are interindividual </h1>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+<figure>
+  <img class="plain" src="img\confmat.jpg" alt="Trial 5, Averaged" style="height:700px;">
+  <figcaption> The subject identification confusion matrix for brain wave modes in the DEAP database. The algorithm can view a set of modes and identify the subject they came from. </figcaption>
+</figure>
+
+</div>
+
+
+
+<div class="col">
+
+<table style="width:60%">
   <tr>
     <th>Reference</th>
-    <th>No. of Electrodes</th>
     <th>Accuracy [%]</th>
   </tr>
   <tr>
     <td>This work</td>
-    <td>32</td>
     <td>99.85</td>
   </tr>
   <tr>
-    <td>This work</td>
-    <td>8</td>
-    <td>96.45</td>
-  </tr>
-  <tr>
     <td><a href="https://ieeexplore.ieee.org/document/8745473">Wilaiprasitporn et al.</a> </td>
-    <td>32</td>
     <td>99.90</td>
-  </tr>
-  <tr>
-    <td><a href="https://ieeexplore.ieee.org/document/8745473">Wilaiprasitporn et al.</a> </td>
-    <td>5</td>
-    <td>99.1</td>
   </tr>
   <tr>
   <tr>
     <td><a href="https://www.worldscientific.com/doi/abs/10.1142/S0129065717500356">DelPozo-Banos et al.</a> </td>
-    <td>32</td>
     <td>97.97</td>
   </tr>
   <tr>
@@ -609,8 +646,62 @@ $\begin{aligned}
 </section>
 
 <section>
-<h1> Modal Analysis of Brain Wave Dynamics </h1>
-<h2> Brain wave modes poorly match nonlinear dynamics </h2>
+<h1> Not all sensors are needed for subject identification accuracy </h1>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+<figure>
+  <img class="plain" src="img\defense\channels-1.png" alt="Trial 5, Averaged" style="height:500px;">
+  <figcaption> Subject identification accuracy vs. the number of channels in the EEG recording. </figcaption>
+</figure>
+
+</div>
+
+
+
+<div class="col">
+
+<table style="width:80%">
+  <tr>
+    <th>Reference</th>
+    <th>No. Channels</th>
+    <th>Accuracy [%]</th>
+  </tr>
+  <tr>
+    <td>This work</td>
+    <td>8</td>
+    <td>96.45</td>
+  </tr>
+  <tr>
+    <td><a href="https://ieeexplore.ieee.org/document/8745473">Wilaiprasitporn et al.</a> </td>
+    <td>5</td>
+    <td>99.1</td>
+  </tr>
+  <tr>
+</table>
+
+</div>
+</section>
+
+<section>
+<h1> Brain wave modes poorly match nonlinear dynamics </h1>
 <style>
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
@@ -634,6 +725,7 @@ $\begin{aligned}
 <figure>
   <img src="img/defense/superposemodes.gif" alt="Trulli" height="600">
 </figure>
+<figcaption> Superposed modes recreate the data they came from. </figcaption>
 </div>
 
 
@@ -642,6 +734,7 @@ $\begin{aligned}
 
 <figure>
   <img src="img/defense/bad_modes.gif" alt="Trulli" height="600">
+  <figcaption> Superposed modes do not match unseen data well. </figcaption>
 </figure>
 
 
@@ -683,7 +776,7 @@ $\begin{aligned}
 
 <dl>
 <dt>Three significant uncertainties</dt>
-  <dd>- Input $u$ is unknown, external</dd>
+  <dd>- Input $u$ is unknown, external, deterministic</dd>
   <dd>- State matrix $A$ may have uncertainty</dd>
   <dd>- General process uncertainty $v_x$</dd>
 <dt>Can we synthesize $u$ and correct $A$?</dt>
@@ -924,14 +1017,13 @@ y&=Cx
 
 <!-- .slide: data-background="#003C71" class="dark" -->
 
-# 6. Reconstructing the Brain's Unknown Input
+# 6. Reconstructing the Unknown Input Using EEG
 Recall: Solving the nonstationary problem
 
 ---
 
 <section>
-<h1> Reconstructing the Brain's Unknown Input </h1>
-<h2> aUIO outperforms static modes </h2>
+<h1> aUIO outperforms static modes </h1>
 <style>
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
@@ -955,7 +1047,8 @@ Recall: Solving the nonstationary problem
 
 <h3> aUIO on unseen data </h3>
 <figure>
-  <img src="img/defense/square_L.gif" alt="Trulli" height="750">
+  <img src="img/defense/square_L.gif" alt="Trulli" height="650">
+    <figcaption> Adaptive input estimator performance when the modes are from a different trial. </figcaption>
 </figure>
 </div>
 
@@ -965,7 +1058,8 @@ Recall: Solving the nonstationary problem
 
 <h3> Weighted modes on seen data </h3>
 <figure>
-  <img src="img/defense/square_noL.gif" alt="Trulli" height="750">
+  <img src="img/defense/square_noL.gif" alt="Trulli" height="650">
+  <figcaption> Superposition of modes decomposed from this data. </figcaption>
 </figure>
 
 
@@ -976,8 +1070,7 @@ Recall: Solving the nonstationary problem
 </section>
 
 <section>
-<h1> Reconstructing the Brain's Unknown Input </h1>
-<h2> aUIO critically updates model as needed </h2>
+<h1> aUIO critically updates model as needed </h1>
 <style>
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
@@ -1009,9 +1102,10 @@ Recall: Solving the nonstationary problem
 
 <div class="col">
 
-<h3> Adaptive gain matrix 2-norm </h3>
+<h3> Adaptive gain matrix 1-norm </h3>
 <figure>
   <img src="img/defense/Ly2.gif" alt="Trulli" height="600">
+  <figcaption> The norm measures "how much" adapting the estimator is doing</figcaption>
 </figure>
 
 
@@ -1025,19 +1119,19 @@ Recall: Solving the nonstationary problem
 </section>
 
 <section>
-<h1> Reconstructing the Brain's Unknown Input </h1>
-<h2> Modeling details </h2>
+
+<h1> Modeling assumptions </h1>
 
  <ul>
   <li>Unknown input acts evenly over spatial domain</li>
   <li>$F_u$ generates sine-cosine basis</li>
   <li>Static gains per LQR </li>
+  <li>Unknown input is "external information"</li>
 </ul> 
 </section>
 
 <section>
-<h1> Reconstructing the Brain's Unknown Input </h1>
-<h2> aUIO is tolerant to parametric uncertainty in modes </h2>
+<h1> aUIO is tolerant to some slop in the modes </h1>
 <style>
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
@@ -1069,7 +1163,7 @@ Recall: Solving the nonstationary problem
 
 <div class="col">
 
-<h3> aUIO with wrong $A_m$ </h3>
+<h3> aUIO with modes from another subject </h3>
 <figure>
   <img src="img/defense/eye.gif" alt="Trulli" height="600">
 </figure>
@@ -1083,8 +1177,7 @@ Recall: Solving the nonstationary problem
 </section>
 
 <section>
-<h1> Reconstructing the Brain's Unknown Input </h1>
-<h2> Classification via estimation </h2>
+<h1> Classification via estimation </h1>
 <style>
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
@@ -1105,20 +1198,35 @@ Recall: Solving the nonstationary problem
 <div class="container vertical-center">
 
 <div class="col">
-
 <figure>
   <img src="img/defense/val_arou.jpg" alt="Trulli" height="400">
 </figure>
+ <ul>
+  <li>DEAP: Two self reported variables</li>
+  <li>$F_u$ generates sine-cosine basis</li>
+  <li>Static gains per LQR </li>
+</ul> 
+
 
 </div>
 
 
 
 <div class="col">
-
 <figure>
   <img src="img/defense/classification_alg.png" alt="Trulli" height="300">
 </figure>
+ <ul>
+  <li>Hypothesis:</li>
+   <ul>
+  <li>modes are correlated with human state/cognition, so</li>
+  <li>same state should have similar modes, so</li>
+  <li>you can take the average modes in a state,</li>
+  <li>and the estimator will perform better than the other averaged model</li>
+</ul> 
+<li><strong>This is a interindividual approach</strong></li>
+</ul> 
+
 
 
 
@@ -1129,8 +1237,12 @@ Recall: Solving the nonstationary problem
 </section>
 
 <section>
-<h1> Reconstructing the Brain's Unknown Input </h1>
-<h2> Classification via estimation </h2>
+<h1> This method is comparable to state of the art deep learning approaches </h1>
+<ul>
+  <li>Computational input and time is lower</li>
+  <li><strong>Analytical information is greater</strong></li>
+  <li>Accuracy is comparable</li>
+</ul> 
 <style>
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
@@ -1181,12 +1293,29 @@ Recall: Solving the nonstationary problem
 # 7. Conclusions
 
 ---
-# Summary
+# Contributions of this dissertation
 
-- Modern, sys-id techniques work on biomarker data
-- Modal representation aids interpreation and analysis
-- Complete body of UIO work
-- Online estimation of nonlinear brain wave dynamics
+- Output only system identification techniques are suitable for linear models of brain wave dynamics via EEG around an operating state
+- Real time spatio-temporal brain wave imaging via modal analysis
+- A novel brain wave fingerprinting algorithm on par with state of the art deep learning approaches
+- A complete body of adaptive, highly nonlinear unknown input estimator work
+- Real time brain wave imaging that accounts for nonstationary, nonlinear dynamics by updating the modes in real time
+- A novel recreation of the unknown brain wave plant's input
+- Valence-arousal emotion classification from the DEAP database on par with cutting edge deep learning approaches 
+
+---
+
+# List of technical works
+
+- **T. Griffith**, J.E. Hubbard. System identification methods for dynamic models of brain activity. *Biomedical Signal Processing and Control* 
+- **T. Griffith**, M. J. Balas. An Adaptive Control Framework for Unknown Input Estimation. *ASME IMECE 2021 Proceedings* 
+- **T. Griffith**, V.P. Gehlot, M. J. Balas. Robust Adaptive Unknown Input Estimation with Uncertain System Realization. *AIAA SciTech 2022 Forum* 
+- **T. Griffith**, V.P. Gehlot, M. J. Balas. Adaptive Estimation of Unknown Inputs with Weakly Nonlinear Dynamics. *ACC 2022* [Accepted]
+- **T. Griffith**, V.P. Gehlot, M. J. Balas. On the Observability of Quantum Dynamical Systems. *ASME IMECE 2022 Proceedings* [Accepted]
+- **T. Griffith**, V.P. Gehlot, M. J. Balas, J.E. Hubbard. An Adaptive Approach to Real Time EEG Estimation. *Biomedical Signal Processing and Control* [In-Review]
+- **T. Griffith**, J.E. Hubbard. System Identification of Brain Wave Modes Using EEG. *Journal of Neural Engineering* [In-Revision]
+
+ 
 
 ---
 
@@ -1407,6 +1536,61 @@ Recall: Solving the nonstationary problem
 </section>
 
 <section>
+<h1> Output only modal analysis is well suited to the analysis of EEG waves</h1>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+Identify the plant: 
+  $\begin{aligned}
+    \begin{cases}
+\dot{x}_m=A_m x +v_x\\\
+y_m=C x_m 
+\end{cases}
+  \end{aligned}$
+<br><br>
+$\begin{aligned}
+    O&=\begin{bmatrix}
+    C \\\ CA_m \\\ CA_m^2 \\\ \vdots \\\ CA_m^{s-1}
+    \end{bmatrix} X_0 \\\
+    &= \Gamma X_0
+\end{aligned}$
+<br><br>
+$\begin{aligned}
+    \hat{\Gamma}=US^{1/2}\\
+    \hat{X}_0=S^{1/2}V^*
+\end{aligned}$
+</div>
+
+
+
+<div class="col">
+<figure>
+  <img src="img/defense/max_order.jpg" alt="Trulli" height="600">
+</figure>
+</div>
+
+</div>
+
+</section>
+
+<section>
 <h1> System Identification of Brain Wave Modes Using EEG </h1>
 <h2> Identifying linear patterns </h2>
 <style>
@@ -1464,6 +1648,46 @@ $\begin{aligned}
 
 </div>
 
+</section>
+
+<section>
+<h1> EEG characteristics </h1>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+<h2> The electrical "ground" varies from laboratory to laboratory </h2>
+<h4> Many different conventions, some virtual </h4>
+<img src="img/defense/EEG1020_ref_crop.png" alt="Trulli" height="500">
+  <figcaption> Longitudinal referencing </figcaption>
+</div>
+
+<div class="col">
+<h2> EEG signals are not independent sources of information </h2>
+<h4> Sensors near each other measure overlapping activity </h4>
+<figure>
+  <img src="img/defense/channels_independent.png" alt="Trulli" height="500">
+    <figcaption>EEG channel pair plots</figcaption>
+</figure>
+</div>
+
+</div>
 </section>
 
 ---
