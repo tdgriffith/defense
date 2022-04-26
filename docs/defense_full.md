@@ -97,7 +97,7 @@
   <li>Prevented ecologically valid experiments</li>
 </ul> 
   <li>Human state (e.g. SA) reduced to discrete self reports</li>
-  <li> <strong> There is new potential for modeling techniques to interpret human state estimation from noisy physiological signals.</strong></li>
+  <li> <strong> There is new potential for modeling techniques to interpret human state from noisy physiological signals.</strong></li>
 </ul> 
 </div>
 
@@ -479,6 +479,49 @@ $\begin{aligned}
 # 4. Modal Analysis of Brain Wave Dynamics
 
 ---
+<section>
+<h1> Modal complexity and traveling waves </h1>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+
+<img class="plain" src="img/animode.gif" alt="Trial 5, Averaged" style="height:500px;">
+<figcaption> Theoretical standing wave mode shape $C_r=0\%$</figcaption>
+
+
+</div>
+
+
+
+<div class="col">
+
+<img class="plain" src="img/animode2.gif" alt="Trial 5, Averaged" style="height:500px;">
+<figcaption> Theoretical standing wave mode shape $C_r=15\%$</figcaption>
+
+
+
+</div>
+
+</div>
+
+</section>
 
 
 <section>

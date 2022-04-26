@@ -4,18 +4,10 @@
 
 # 1. Intro and motivation
 - Paradigm shift
-- Improved sensing, path planning, decision making
-- Lots of human to computer, less computer to human
-- Automation conundrum and teaming, bi-directional flow
-- Are you paying attention???
-
 
 ---
 
-### Endsley quote
-- Historically simulation questionnaire
-- Sensors and modeling moving towards physiological measures of human state/cognition
-
+### Improved hardware
 >  There has been a recent proliferation of more rugged and durable sensor devices (e.g., fNIRS sensors) that can be used while people take part in ecologically valid activities to assess changes in neurophysiology, physiology, and behavior that correlate with cognitive state. In addition, recent advances in machine learning and modeling techniques can be used to interpret information about human states (e.g., SA) from noisy data acquired in such environments that previously was unusable.
 
 ---
@@ -29,11 +21,6 @@
 
 ### State of the art
 > Recent modeling work, however, using large-scale dynamical models on the human connectome, suggests that cortical flow patterns are multistable and exhibit phase-transitions. To study such phenomena, a dynamic analysis in which no assumptions about stationarity are made, is required.
-
-- Nonstationary signals make the ***dynamics*** tricky
-- Phase and traveling waves
-- This work seeks a method to address in engineering dynamics terms 
-    - with eye towards cognitive outcomes
 
 ---
 
@@ -53,26 +40,15 @@ What we are saying
 
 ---
 
-### Important EEG details
-- EEG is only loosely tied to outcomes
-- Linear, nonlinear, and noise
-- Channel cross talk
-- Variety of referencing techniques
-
----
 
 ### A canonical approach
 - Have these difficult signals, nonlinear and not independent and nonstationary
 - We impose this structure, consider $A(t)$
+- WHAT ARE THE MATRICES 
 
 ### level is an unsolved
-- We can't not know everything
- - but we do
-- SO
-    - first identify the linear structure
-    - ***around an operating point***
-    - realizing that the unknown input and nonlinear leaks thru
-    - uncertainty in A_m bc C_m would be equivalent
+- realizing that the unknown input and nonlinear leaks thru
+- uncertainty in A_m bc C_m would be equivalent
 
 ### treating nonlinear
 - Lots of works says this is a nonlinear nonstationary system
@@ -202,8 +178,3 @@ we've got a problem. address with full architecture
 
 --- 
 # Ack
-
-Error dynamics
-
-`$$ \dot{e}=(\bar{A}+\bar{K} \bar{C})e+\bar{B} \underbrace{\Delta L y}_\text{$w$} + v $$`
-`$$ \begin{bmatrix} \dot{e}_x \\\ \dot{e}_z \end{bmatrix} = \underbrace{\begin{bmatrix} A_m+K_x C & B \Theta_u \\\ K_u C & F_u \end{bmatrix}}_\text{$\bar{A}_c$} \begin{bmatrix} e_x \\\ e_z \end{bmatrix} +\begin{bmatrix} B \\\ 0 \end{bmatrix} w +\begin{bmatrix} v_x \\\ v_u \end{bmatrix}$$`
