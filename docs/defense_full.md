@@ -46,12 +46,12 @@
 
 <div class="col">
  <ul style="font-size:2vw">
-  <li>Modern systems feature humans as supervisors, not sole actors</li>
+  <li style="padding-bottom:0.2em">Modern systems feature humans as supervisors, not sole actors</li>
   <ul>
-  <li>Teaming becomes important for safety and performance</li>
+  <li style="padding-bottom:0.2em">Teaming becomes important for safety and performance</li>
 </ul> 
-  <li>Comparatively less research analyzes the information flow from human to computer.</li>
-  <li> <strong> This work investigates the use of canonical engineering principles for estimation of human state/cognition.</strong></li>
+  <li style="padding-bottom:0.2em">Comparatively less research analyzes the information flow from human to computer.</li>
+  <li style="padding-bottom:0.2em"> <em><strong> This work investigates the use of canonical engineering principles for estimation of human state/cognition.</strong></em></li>
 </ul> 
 </div>
 
@@ -92,12 +92,12 @@
 
 <div class="col">
  <ul style="font-size:2vw">
-  <li>Physiological signals are historically not portable</li>
+  <li style="padding-bottom:0.2em">Physiological signals are historically not portable</li>
   <ul>
-  <li>Prevented ecologically valid experiments</li>
+  <li style="padding-bottom:0.2em">Prevented ecologically valid experiments</li>
 </ul> 
-  <li>Human state (e.g. SA) reduced to discrete self reports</li>
-  <li> <strong> There is new potential for modeling techniques to interpret human state from noisy physiological signals.</strong></li>
+  <li style="padding-bottom:0.2em">Human state (e.g. SA) reduced to discrete self reports</li>
+  <li style="padding-bottom:0.2em"> <em><strong> There is new potential for modeling techniques to interpret human state from noisy physiological signals.</strong></em></li>
 </ul> 
 </div>
 
@@ -123,7 +123,7 @@
 - Cognition gives rise to EEG signals
   - but it is ***noisy*** and only ***loosely*** correlated with cognition
 - Cellular activity can only be measured invasively 
-- **Can we say something about cognition from dynamic EEG signals**?
+- ***Can we say something about cognition from dynamic EEG signals***?
 
 
 ---
@@ -173,9 +173,9 @@
 
 <div class="col">
  <ul style="font-size:2vw">
-  <li>Engineering mechanics does not require atomic level analysis to evaluate stress and strain.</li>
+  <li style="padding-bottom:0.2em">Engineering mechanics does not require atomic level analysis to evaluate stress and strain.</li>
   <ul>
-  <li>Can we extend this analogy to spatio-temporal dynamics of human cognition?</li>
+  <li style="padding-bottom:0.2em">Can we extend this analogy to spatio-temporal dynamics of human cognition?</li>
 </ul> 
 </ul> 
 </div>
@@ -264,15 +264,15 @@ accepting the uncertainty in $A_m$.
 </figure>
 
  <ul>
-  <li>A giant $(A,C)$ may not be useful!</li>
-  <li>Modes have:</li>
+  <li style="padding-bottom:0.2em">A giant $(A,C)$ may not be useful!</li>
+  <li style="padding-bottom:0.2em">Modes have:</li>
   <ul>
-  <li>Frequency ($f$)</li>
-  <li>Damping ($\zeta$)</li>
-  <li>Mode shape ($\phi$)</li>
-  <li>Complexity ($\%$)</li>
+  <li style="padding-bottom:0.2em">Frequency ($f$)</li>
+  <li style="padding-bottom:0.2em">Damping ($\zeta$)</li>
+  <li style="padding-bottom:0.2em">Mode shape ($\phi$)</li>
+  <li style="padding-bottom:0.2em">Complexity ($\%$)</li>
 </ul> 
-  <li>Modal dynamics are equivalent to original model</li>
+  <li style="padding-bottom:0.2em">Modal dynamics are equivalent to original model</li>
 </ul> 
 
 </section>
@@ -314,9 +314,9 @@ accepting the uncertainty in $A_m$.
   <img src="img/defense/val_arou.jpg" alt="Trulli" height="400">
 </figure>
  <ul>
-  <li>32 sensors</li>
-  <li>32 subjects watch 40 videos</li>
-  <li>Subjects self report Valence and Arousal</li>
+  <li style="padding-bottom:0.2em">32 sensors</li>
+  <li style="padding-bottom:0.2em">32 subjects watch 40 videos</li>
+  <li style="padding-bottom:0.2em">Subjects self report Valence and Arousal</li>
 </ul> 
 </div>
 
@@ -329,9 +329,9 @@ accepting the uncertainty in $A_m$.
   <img src="https://www.ncbi.nlm.nih.gov/pmc/articles/instance/3463641/bin/nihms-386132-f0003.jpg" alt="Trulli" height="400">
 </figure>
  <ul>
-  <li>60 sensors</li>
-  <li>100 subjects at rest state</li>
-  <li>Subjects self report craving scale</li>
+  <li style="padding-bottom:0.2em">60 sensors</li>
+  <li style="padding-bottom:0.2em">100 subjects at rest state</li>
+  <li style="padding-bottom:0.2em">Subjects self report craving scale</li>
 </ul> 
 </div>
 
@@ -346,10 +346,10 @@ accepting the uncertainty in $A_m$.
 <section>
 <h1> Output only modal analysis is well suited to the analysis of EEG waves</h1>
  <ul>
-  <li>OMA (stochastic, zero mean)</li>
-  <li>DMD (deterministic, full state)</li>
-  <li>NeXT (deterministic, modal)</li>
-  <li>N4SID (stochastic, Kalman states)</li>
+  <li style="padding-bottom:0.2em">OMA (stochastic, zero mean)</li>
+  <li style="padding-bottom:0.2em">DMD (deterministic, full state)</li>
+  <li style="padding-bottom:0.2em">NeXT (deterministic, modal)</li>
+  <li style="padding-bottom:0.2em">N4SID (stochastic, Kalman states)</li>
 </ul> 
 
 
@@ -403,7 +403,7 @@ $\begin{aligned}
     \hat{\Gamma}=US^{1/2}\\
     \hat{X}_0=S^{1/2}V^*
 \end{aligned}$
-<h3> Observability is so important! </h3>
+<h3><em><strong> Observability is so important! </strong></em></h3>
 </div>
 
 
@@ -622,10 +622,10 @@ $\begin{aligned}
 <br>
 <h4> Common mode frequencies are aligned with the Rest State Network</h4>
  <ul>
-  <li>Alpha Mode 1: `$4.34\pm 0.03$`</li>
-  <li>Beta Mode 2: `$21.83 \pm 0.22$`</li>
-  <li>Gamma Mode 3: `$40.39\pm 0.26$`</li>
-  <li>Gamma Mode 4: `$44.19 \pm 0.24$`</li>
+  <li style="padding-bottom:0.2em">Alpha Mode 1: `$4.34\pm 0.03$`</li>
+  <li style="padding-bottom:0.2em">Beta Mode 2: `$21.83 \pm 0.22$`</li>
+  <li style="padding-bottom:0.2em">Gamma Mode 3: `$40.39\pm 0.26$`</li>
+  <li style="padding-bottom:0.2em">Gamma Mode 4: `$44.19 \pm 0.24$`</li>
 </ul> 
 
 </section>
@@ -822,7 +822,7 @@ $\begin{aligned}
   <dd>- Input $u$ is unknown, external, deterministic</dd>
   <dd>- State matrix $A$ may have uncertainty</dd>
   <dd>- General process uncertainty $v_x$</dd>
-<dt>Can we synthesize $u$ and correct $A$?</dt>
+<dt><strong><em>Can we synthesize $u$ and correct $A$?</em></strong></dt>
 </dl> 
 </div>
 
@@ -967,7 +967,7 @@ Error dynamics
 <dt>Bounded `$L_{*}$`, $v$, and $\gamma_e$</dt>
 <dt>Error in state and input converges to an neighborood centered at zero</dt>
   <dd>`$V(e,\Delta L) = \frac{1}{2} e^* \bar{P} e + \frac{1}{2} \text{tr}(\Delta L \gamma_e^{-1} \Delta L^*)$`</dd>
-  <dd>`$\lim_{t \rightarrow \infty} \sup ||e(t)|| \leq \frac{1+\sqrt{\lambda_{\text{max}}\bar{P}}}{\alpha \sqrt{\lambda_{\text{min}}\bar{P}}} M_v \equiv R^*$`</dd>
+  <dd><strong><em>`$\lim_{t \rightarrow \infty} \sup ||e(t)|| \leq \frac{1+\sqrt{\lambda_{\text{max}}\bar{P}}}{\alpha \sqrt{\lambda_{\text{min}}\bar{P}}} M_v \equiv R^*$`</em></strong></dd>
 </dl> 
 
 
@@ -1166,10 +1166,10 @@ Recall: Solving the nonstationary problem
 <h1> Modeling assumptions </h1>
 
  <ul>
-  <li>Unknown input acts evenly over spatial domain</li>
-  <li>$F_u$ generates sine-cosine basis</li>
-  <li>Static gains per LQR </li>
-  <li>Unknown input is "external information"</li>
+  <li style="padding-bottom:0.2em">Unknown input acts evenly over spatial domain</li>
+  <li style="padding-bottom:0.2em">$F_u$ generates sine-cosine basis</li>
+  <li style="padding-bottom:0.2em">Static gains per LQR </li>
+  <li style="padding-bottom:0.2em"><strong><em>Unknown input is "external information"</em></strong></li>
 </ul> 
 </section>
 
@@ -1245,9 +1245,9 @@ Recall: Solving the nonstationary problem
   <img src="img/defense/val_arou.jpg" alt="Trulli" height="400">
 </figure>
  <ul>
-  <li>DEAP: Two self reported variables</li>
-  <li>$F_u$ generates sine-cosine basis</li>
-  <li>Static gains per LQR </li>
+  <li style="padding-bottom:0.2em">DEAP: Two self reported variables</li>
+  <li style="padding-bottom:0.2em">$F_u$ generates sine-cosine basis</li>
+  <li style="padding-bottom:0.2em">Static gains per LQR </li>
 </ul> 
 
 
@@ -1260,14 +1260,14 @@ Recall: Solving the nonstationary problem
   <img src="img/defense/classification_alg.png" alt="Trulli" height="300">
 </figure>
  <ul>
-  <li>Hypothesis:</li>
+  <li style="padding-bottom:0.2em">Hypothesis:</li>
    <ul>
-  <li>modes are correlated with human state/cognition, so</li>
-  <li>same state should have similar modes, so</li>
-  <li>you can take the average modes in a state,</li>
-  <li>and the estimator will perform better than the other averaged model</li>
+  <li style="padding-bottom:0.2em">modes are correlated with human state/cognition, so</li>
+  <li style="padding-bottom:0.2em">same state should have similar modes, so</li>
+  <li style="padding-bottom:0.2em">you can take the average modes in a state,</li>
+  <li style="padding-bottom:0.2em">and the estimator will perform better than the other averaged model</li>
 </ul> 
-<li><strong>This is a interindividual approach</strong></li>
+<li style="padding-bottom:0.2em"><strong><em>This is a interindividual approach</em></strong></li>
 </ul> 
 
 
@@ -1282,9 +1282,9 @@ Recall: Solving the nonstationary problem
 <section>
 <h1> This method is comparable to state of the art deep learning approaches </h1>
 <ul>
-  <li>Computational input and time is lower</li>
-  <li><strong>Analytical information is greater</strong></li>
-  <li>Accuracy is comparable</li>
+  <li style="padding-bottom:0.2em">Computational input and time is lower</li>
+  <li style="padding-bottom:0.2em"><strong><em>Analytical information is greater</em></strong></li>
+  <li style="padding-bottom:0.2em">Accuracy is comparable</li>
 </ul> 
 <style>
 .vertical-center {
@@ -1440,7 +1440,7 @@ Recall: Solving the nonstationary problem
 
 <div class="col">
 <figure>
-  <img src="img\defense\prof.jpg" alt="Trulli" height="500">
+  <img src="https://engineering.tamu.edu/mechanical/_files/_images/_profile-images/MEEN-profile-James-Hubbard-3Sept2019.jpg" alt="Trulli" height="500">
     <figcaption>James Hubbard</figcaption>
 </figure>
 </div>
