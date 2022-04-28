@@ -18,7 +18,7 @@
 ## 4. Modal Analysis of Brain Wave Dynamics
 ## 5. Adaptive Unknown Input Estimators
 ## 6. Reconstructing the Unknown Input Using EEG
-## 7. Conclusions 
+## 7. Significant Contributions 
 
 
 ---
@@ -135,7 +135,7 @@
 
 <!-- .slide: data-background="#ffffff" class="light" -->
 
-# Nonstationary, nonlinear signals make the ***dynamics*** tricky
+# Nonstationary, nonlinear signals make the ***dynamics*** complicated
 
 <ul style="font-size:2vw">
   <li style="padding-bottom:0.9em">Historically,</li>
@@ -150,7 +150,7 @@
 </ul> 
 </ul>
 
-> a dynamic analysis in which no assumptions about stationarity are made, is required.
+<h2> a dynamic analysis in which no assumptions about stationarity are made, is required. </h2>
 
 
 
@@ -189,7 +189,8 @@
   <li style="padding-bottom:0.9em">Can we extend this analogy to spatio-temporal dynamics of human cognition?</li>
 </ul> 
 <ul>
-  <li style="padding-bottom:0.9em">Because brain wave dynamics are also spectral</li>
+  <li style="padding-bottom:0.9em">Because brain wave dynamics are also spectral and ***admit*** spatio-temporal modes</li>
+  <li style="padding-bottom:0.9em">Without the need to model the connectome.</li>
 </ul> 
 </ul> 
 </div>
@@ -234,13 +235,14 @@
 ---
 
 <section>
+
 <h1> A canonical approach: </h1>
 <br>
 <img src="img/defense/eeg_ex2.png" alt="Trulli" height="400">
 <br>
 :arrow_double_down:
 <br>
-Linearized brain wave plant: 
+Linearized brain wave "plant": 
   $\begin{aligned}
     \begin{cases}
     \dot{x}=Ax+Bu +v_x \\\
@@ -248,7 +250,7 @@ Linearized brain wave plant:
     \end{cases}
   \end{aligned}$
 <br>
-<h2> linearization is ***around an operating point*** </h2>
+<h2> linearization is ***around an operating point*** (i.e. a cognitive state) </h2>
 <br>
 but $A, \ B, \ C, \ v_x, \ x, \text{and} \ u $ are all unknown.
 
@@ -256,9 +258,23 @@ but $A, \ B, \ C, \ v_x, \ x, \text{and} \ u $ are all unknown.
 </section>
 
 <section>
-$A, \ B, \ C, \ v_x, \ x, \text{and} \ u $ are ***all unknown***.
-<h2> This level of uncertainty is an unsovled problem </h2>
 
+<style>
+.reveal blockquote {
+text-align: center;
+width: 65%;
+border: solid;
+box-shadow: none;
+background: #eaeaea;
+}
+</style>
+
+$A, \ B, \ C, \ v_x, \ x, \text{and} \ u $ are ***all unknown***.
+<br><br>
+<h2> This level of uncertainty is an unsovled problem </h2>
+<br><br>
+
+<blockquote>
 Identify the plant: 
   $\begin{aligned}
     \begin{cases}
@@ -266,8 +282,10 @@ Identify the plant:
 y_m=C x_m
 \end{cases}
   \end{aligned}$,
-<br>
+<br><br>
 accepting the uncertainty in $A_m$.
+</blockquote>
+
 
 </section>
 
@@ -291,49 +309,6 @@ accepting the uncertainty in $A_m$.
 
 </section>
 
-<section>
-<h1> Modal complexity and traveling waves </h1>
-<style>
-.vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
-
-  display: flex;
-  align-items: center;
-}
-
-.container{
-    display: flex;
-}
-.col{
-    flex: 1;
-}
-</style>
-
-<div class="container vertical-center">
-
-<div class="col">
-
-<img class="plain" src="img/animode.gif" alt="Trial 5, Averaged" style="height:500px;">
-<figcaption> Theoretical standing wave mode shape $C_r=0\%$</figcaption>
-
-
-</div>
-
-
-
-<div class="col">
-
-<img class="plain" src="img/animode2.gif" alt="Trial 5, Averaged" style="height:500px;">
-<figcaption> Theoretical standing wave mode shape $C_r=15\%$</figcaption>
-
-
-
-</div>
-
-</div>
-
-</section>
 
 
 ---
@@ -453,7 +428,7 @@ y_m=C x_m
 $\begin{aligned}
     O&=\begin{bmatrix}
     C \\\ CA_m \\\ CA_m^2 \\\ \vdots \\\ CA_m^{s-1}
-    \end{bmatrix} X_0 \\\
+    \end{bmatrix} X_0 \\\ \\\
     &= \Gamma X_0
 \end{aligned}$
 <br><br>
@@ -461,7 +436,8 @@ $\begin{aligned}
     \hat{\Gamma}=US^{1/2}\\
     \hat{X}_0=S^{1/2}V^*
 \end{aligned}$
-<h3><em><strong> Observability is so important! </strong></em></h3>
+<br><br>
+<h3><em><strong> Observability is important! </strong></em></h3>
 </div>
 
 
@@ -560,7 +536,7 @@ $\begin{aligned}
 
 <div class="col">
 
-<img class="plain" src="img/animode.gif" alt="Trial 5, Averaged" style="height:500px;">
+<img class="plain" src="img/defense/real.gif" alt="Trial 5, Averaged" style="height:500px;">
 <figcaption> Theoretical standing wave mode shape $C_r=0\%$</figcaption>
 
 
@@ -570,7 +546,7 @@ $\begin{aligned}
 
 <div class="col">
 
-<img class="plain" src="img/animode2.gif" alt="Trial 5, Averaged" style="height:500px;">
+<img class="plain" src="img/defense/complex.gif" alt="Trial 5, Averaged" style="height:500px;">
 <figcaption> Theoretical standing wave mode shape $C_r=15\%$</figcaption>
 
 
@@ -649,6 +625,13 @@ $\begin{aligned}
 .col{
     flex: 1;
 }
+.description {
+  color: #000000;
+}
+
+.description em {
+  color: #E4002B;
+}
 </style>
 
 <div class="container vertical-center">
@@ -656,8 +639,8 @@ $\begin{aligned}
 <div class="col">
 
 <figure>
-  <img src="img/common1.gif" alt="Trial 5, Averaged" style="height:500px;">
-  <figcaption> Alpha Mode 1 from Subject 19, Trial 6 in the DEAP database. </figcaption>
+  <img src="img/common1.gif" alt="Trial 5, Averaged" style="height:400px;">
+  <figcaption class="description"> Alpha Mode 1 from Subject 19, ***Trial 6*** in the DEAP database. </figcaption>
 </figure>
 
 
@@ -668,8 +651,8 @@ $\begin{aligned}
 <div class="col">
 
 <figure>
-  <img src="img/common1.gif" alt="Trial 5, Averaged" style="height:500px;">
-  <figcaption> Alpha Mode 1 from Subject 19, Trial 20 in the DEAP database. </figcaption>
+  <img src="img/common1.gif" alt="Trial 5, Averaged" style="height:400px;">
+  <figcaption class="description"> Alpha Mode 1 from Subject 19, ***Trial 20*** in the DEAP database. </figcaption>
 </figure>
 
 
@@ -681,17 +664,17 @@ $\begin{aligned}
 <blockquote>
 <h4> Common mode frequencies are aligned with the Rest State Network</h4>
  <ul>
-  <li style="padding-bottom:0.9em">Alpha Mode 1: `$4.34\pm 0.03$`</li>
-  <li style="padding-bottom:0.9em">Beta Mode 2: `$21.83 \pm 0.22$`</li>
-  <li style="padding-bottom:0.9em">Gamma Mode 3: `$40.39\pm 0.26$`</li>
-  <li style="padding-bottom:0.9em">Gamma Mode 4: `$44.19 \pm 0.24$`</li>
+  <li style="padding-bottom:0.9em">Alpha Mode 1: `$4.34\pm 0.03$ hz`</li>
+  <li style="padding-bottom:0.9em">Beta Mode 2: `$21.83 \pm 0.22$` hz</li>
+  <li style="padding-bottom:0.9em">Gamma Mode 3: `$40.39\pm 0.26$` hz</li>
+  <li style="padding-bottom:0.9em">Gamma Mode 4: `$44.19 \pm 0.24$` hz</li>
 </ul> 
 </blockquote>
 </section>
 
 
 <section>
-<h1> Brain wave modes are interindividual </h1>
+<h1> These brain wave modes can be used to fingerprint or identify individual subjects </h1>
 <style>
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
@@ -748,7 +731,7 @@ $\begin{aligned}
 </section>
 
 <section>
-<h1> Not all sensors are needed for subject identification accuracy </h1>
+<h1> Not all EEG channels are needed for subject identification </h1>
 <style>
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
@@ -836,7 +819,7 @@ $\begin{aligned}
 
 <figure>
   <img src="img/defense/bad_modes.gif" alt="Trulli" height="600">
-  <figcaption> Superposed modes do not match unseen data well. </figcaption>
+  <figcaption> Superposed modes do not match unseen data well. An adaptive update is needed. </figcaption>
 </figure>
 
 
@@ -1230,7 +1213,7 @@ Recall: Solving the nonstationary problem
 
 <section>
 
-<h1> Modeling assumptions </h1>
+<h1> Unknown Input Modeling Assumptions </h1>
 
  <ul style="font-size:2vw">
   <li style="padding-bottom:0.9em">Unknown input acts evenly over spatial domain</li>
@@ -1241,7 +1224,7 @@ Recall: Solving the nonstationary problem
 </section>
 
 <section>
-<h1> aUIO is tolerant to some slop in the modes </h1>
+<h1> aUIO is tolerant to some parametric uncertainty in the modes </h1>
 <style>
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
@@ -1334,7 +1317,7 @@ Recall: Solving the nonstationary problem
   <li style="padding-bottom:0.9em">you can take the average modes in a state,</li>
   <li style="padding-bottom:0.9em">and the estimator will perform better than the other averaged model</li>
 </ul> 
-<li style="padding-bottom:0.9em"><strong><em>This is a interindividual approach</em></strong></li>
+<li style="padding-bottom:0.9em"><strong><em>This is a inter-individual approach</em></strong></li>
 </ul> 
 
 
@@ -1400,7 +1383,7 @@ Recall: Solving the nonstationary problem
 
 <!-- .slide: data-background="#003C71" class="dark" -->
 
-# 7. Conclusions
+# 7. Significant Contributions
 
 ---
 # Contributions of this dissertation
@@ -1418,7 +1401,7 @@ Recall: Solving the nonstationary problem
 
 ---
 
-# List of technical works
+# Publications & Presentations
 
  <ul style="font-size:1.7vw">
   <li style="padding-bottom:0.9em"><strong>T. Griffith</strong>, J.E. Hubbard. System identification methods for dynamic models of brain activity. <em>Biomedical Signal Processing and Control</em> </li>
@@ -1594,9 +1577,10 @@ Recall: Solving the nonstationary problem
 ---
 
 <!-- .slide: data-background="#500000" class="dark" -->
-# A Modal Approach to the Space Time Dynamics of Cognitive Biomarkers
 
-> The willow submits to the wind and prospers until one day it is many willows - a wall against the wind.
+<h1> A Modal Approach to the Space Time Dynamics of Cognitive Biomarkers </h1>
+
+<h3>The willow submits to the wind and prospers until one day it is many willows - a wall against the wind. </h3>
 
 <br>
 <div style="text-align: right"> <small>- Dune</small></div>
