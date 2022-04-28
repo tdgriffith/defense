@@ -44,15 +44,11 @@ What we are saying
 ### A canonical approach
 - Have these difficult signals, nonlinear and not independent and nonstationary
 - We impose this structure, consider $A(t)$
-- WHAT ARE THE MATRICES 
+- > WHAT ARE THE MATRICES 
 
 ### level is an unsolved
 - realizing that the unknown input and nonlinear leaks thru
 - uncertainty in A_m bc C_m would be equivalent
-
-### treating nonlinear
-- Lots of works says this is a nonlinear nonstationary system
-- We introduce a nonlinear nonstationary estimator that updates the model in real time
 
 ### Modes elegantly capture
 - Giant (A,B,C) isn't useful for analysis
@@ -63,10 +59,12 @@ What we are saying
 ---
 
 # 3. Sys Id using EEG
-With that overview, how do we extract that first step, the linear operating point...
+
+### Datasets
+- Before going further
+- Looking at MODELING
 
 ### Considered algorithms
-- We want to extract those ***linear*** patterns from the data
 - Looked at 4 that give right structure
 - For time, OMA only bc
     - classification
@@ -74,8 +72,6 @@ With that overview, how do we extract that first step, the linear operating poin
     - Numerical algorithm for Subspace State Space System IDentification
 
 ### OMA theory
-- A discrete time plant looks like this
-- If we knew size of C and initial condition... 
 - ***LEFT AND RIGHT SINGULAR VECTORS***
     - ***FILLING IN THE DISTRIBUTION***
 
@@ -89,15 +85,10 @@ With that overview, how do we extract that first step, the linear operating poin
 
 ---
 # 4. Modal Analysis of Brain Wave Dynamics
-- Remember, linear model of nonlinear system
-    - Is it useful???
-- Analysis
+
 
 ### Traveling vs standing
-- When do waves reach peak?
-- a function of uneven damping
-- negative damping
-- indicates different regions doing different tasks
+
 
 ### Common modes
 - Find four out of 40 to be task independent

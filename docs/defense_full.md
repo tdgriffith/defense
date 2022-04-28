@@ -3,22 +3,22 @@
 # A Modal Approach to the Space Time Dynamics of Cognitive Biomarkers 
 
 ## T. Griffith
-#### Defense
+### Defense
 
-#### April 29, 2022
+### April 29, 2022
 
 ---
 
 <!-- .slide: data-background="#ffffff" class="light" -->
 # ***Outline***
 
-### 1. Introduction & Motivation
-### 2. A Dynamic Systems View of Brain Waves
-### 3. System Identification of Brain Wave Modes Using EEG
-### 4. Modal Analysis of Brain Wave Dynamics
-### 5. Adaptive Unknown Input Estimators
-### 6. Reconstructing the Unknown Input Using EEG
-### 7. Conclusions 
+## 1. Introduction & Motivation
+## 2. A Dynamic Systems View of Brain Waves
+## 3. System Identification of Brain Wave Modes Using EEG
+## 4. Modal Analysis of Brain Wave Dynamics
+## 5. Adaptive Unknown Input Estimators
+## 6. Reconstructing the Unknown Input Using EEG
+## 7. Conclusions 
 
 
 ---
@@ -46,12 +46,12 @@
 
 <div class="col">
  <ul style="font-size:2vw">
-  <li style="padding-bottom:0.4em">Modern systems feature humans as supervisors, not sole actors</li>
+  <li style="padding-bottom:0.9em">Modern systems feature humans as supervisors, not sole actors</li>
   <ul>
-  <li style="padding-bottom:0.4em">Teaming becomes important for safety and performance</li>
+  <li style="padding-bottom:0.9em">Teaming becomes important for safety and performance</li>
 </ul> 
-  <li style="padding-bottom:0.4em">Comparatively less research analyzes the information flow from human to computer.</li>
-  <li style="padding-bottom:0.4em"> <em><strong> This work investigates the use of canonical engineering principles for estimation of human state/cognition.</strong></em></li>
+  <li style="padding-bottom:0.9em">Comparatively less research analyzes the information flow from human to computer.</li>
+  <li style="padding-bottom:0.9em"> <em><strong> This work investigates the use of canonical engineering principles for estimation of human state/cognition.</strong></em></li>
 </ul> 
 </div>
 
@@ -70,7 +70,7 @@
 
 <!-- .slide: data-background="#ffffff" class="light" -->
 
-# Hardware and experimental design an be used to interpret information about human states from noisy physiological data.
+# Hardware and experimental design can be used to interpret information about human states from noisy physiological data.
 <style>
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
@@ -92,12 +92,12 @@
 
 <div class="col">
  <ul style="font-size:2vw">
-  <li style="padding-bottom:0.4em">Physiological signals are historically not portable</li>
+  <li style="padding-bottom:0.9em">Physiological signals are historically not portable</li>
   <ul>
-  <li style="padding-bottom:0.4em">Prevented ecologically valid experiments</li>
+  <li style="padding-bottom:0.9em">Prevented ecologically valid experiments</li>
 </ul> 
-  <li style="padding-bottom:0.4em">Human state (e.g. SA) reduced to discrete self reports</li>
-  <li style="padding-bottom:0.4em"> <em><strong> There is new potential for modeling techniques to interpret human state from noisy physiological signals.</strong></em></li>
+  <li style="padding-bottom:0.9em">Human state (e.g. SA) reduced to discrete self reports</li>
+  <li style="padding-bottom:0.9em"> <em><strong> There is new potential for modeling techniques to interpret human state from noisy physiological signals.</strong></em></li>
 </ul> 
 </div>
 
@@ -120,10 +120,15 @@
 <div class="col">
 <img src="img/defense/black_box.png" alt="Trial 5, Averaged" width="80%">
 </div>
-- Cognition gives rise to EEG signals
-  - but it is ***noisy*** and only ***loosely*** correlated with cognition
-- Cellular activity can only be measured invasively 
-- ***Can we say something about cognition from dynamic EEG signals***?
+<ul style="font-size:2vw">
+  <li style="padding-bottom:0.9em">Cognition gives rise to EEG signals</li>
+  <ul>
+  <li style="padding-bottom:0.9em">but it is ***noisy*** and only ***loosely*** correlated with cognition</li>
+</ul> 
+<li style="padding-bottom:0.9em">Cellular activity can only be measured invasively </li>
+<li style="padding-bottom:0.9em">***Can we say something about cognition from dynamic EEG signals***? </li>
+</ul> 
+
 
 
 ---
@@ -132,12 +137,18 @@
 
 # Nonstationary, nonlinear signals make the ***dynamics*** tricky
 
-- Historically, 
-  - stationary analysis is used with a sliding window
-  - or case by case highly derived models are developed
-- This work seeks a method to address in engineering dynamics terms 
-    - with eye towards cognitive outcomes
-    - because there are many existing analytical tools in engineering dynamics
+<ul style="font-size:2vw">
+  <li style="padding-bottom:0.9em">Historically,</li>
+  <ul>
+  <li style="padding-bottom:0.9em">stationary analysis is used with a sliding window</li>
+  <li style="padding-bottom:0.9em">or case by case highly derived models are developed</li>
+</ul> 
+<li style="padding-bottom:0.9em">This work seeks a method to address in engineering dynamics terms</li>
+  <ul>
+  <li style="padding-bottom:0.9em">with eye towards cognitive outcomes</li>
+  <li style="padding-bottom:0.9em">because there are many existing analytical tools in engineering dynamics</li>
+</ul> 
+</ul>
 
 > a dynamic analysis in which no assumptions about stationarity are made, is required.
 
@@ -173,9 +184,12 @@
 
 <div class="col">
  <ul style="font-size:2vw">
-  <li style="padding-bottom:0.4em">Engineering mechanics does not require atomic level analysis to evaluate stress and strain.</li>
+  <li style="padding-bottom:0.9em">Engineering mechanics does not require atomic level analysis to evaluate stress and strain.</li>
   <ul>
-  <li style="padding-bottom:0.4em">Can we extend this analogy to spatio-temporal dynamics of human cognition?</li>
+  <li style="padding-bottom:0.9em">Can we extend this analogy to spatio-temporal dynamics of human cognition?</li>
+</ul> 
+<ul>
+  <li style="padding-bottom:0.9em">Because brain wave dynamics are also spectral</li>
 </ul> 
 </ul> 
 </div>
@@ -264,16 +278,60 @@ accepting the uncertainty in $A_m$.
 </figure>
 
  <ul>
-  <li style="padding-bottom:0.4em">A giant $(A,C)$ may not be useful!</li>
-  <li style="padding-bottom:0.4em">Modes have:</li>
+  <li style="padding-bottom:0.9em">A giant $(A,C)$ may not be useful!</li>
+  <li style="padding-bottom:0.9em">Modes have:</li>
   <ul>
-  <li style="padding-bottom:0.4em">Frequency ($f$)</li>
-  <li style="padding-bottom:0.4em">Damping ($\zeta$)</li>
-  <li style="padding-bottom:0.4em">Mode shape ($\phi$)</li>
-  <li style="padding-bottom:0.4em">Complexity ($\%$)</li>
+  <li style="padding-bottom:0.9em">Frequency ($f$)</li>
+  <li style="padding-bottom:0.9em">Damping ($\zeta$)</li>
+  <li style="padding-bottom:0.9em">Mode shape ($\phi$)</li>
+  <li style="padding-bottom:0.9em">Complexity ($\%$)</li>
 </ul> 
-  <li style="padding-bottom:0.4em">Modal dynamics are equivalent to original model</li>
+  <li style="padding-bottom:0.9em">Modal dynamics are equivalent to original model</li>
 </ul> 
+
+</section>
+
+<section>
+<h1> Modal complexity and traveling waves </h1>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+
+<img class="plain" src="img/animode.gif" alt="Trial 5, Averaged" style="height:500px;">
+<figcaption> Theoretical standing wave mode shape $C_r=0\%$</figcaption>
+
+
+</div>
+
+
+
+<div class="col">
+
+<img class="plain" src="img/animode2.gif" alt="Trial 5, Averaged" style="height:500px;">
+<figcaption> Theoretical standing wave mode shape $C_r=15\%$</figcaption>
+
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -314,9 +372,9 @@ accepting the uncertainty in $A_m$.
   <img src="img/defense/val_arou.jpg" alt="Trulli" height="400">
 </figure>
  <ul>
-  <li style="padding-bottom:0.4em">32 sensors</li>
-  <li style="padding-bottom:0.4em">32 subjects watch 40 videos</li>
-  <li style="padding-bottom:0.4em">Subjects self report Valence and Arousal</li>
+  <li style="padding-bottom:0.9em">32 sensors</li>
+  <li style="padding-bottom:0.9em">32 subjects watch 40 videos</li>
+  <li style="padding-bottom:0.9em">Subjects self report Valence and Arousal</li>
 </ul> 
 </div>
 
@@ -329,9 +387,9 @@ accepting the uncertainty in $A_m$.
   <img src="https://www.ncbi.nlm.nih.gov/pmc/articles/instance/3463641/bin/nihms-386132-f0003.jpg" alt="Trulli" height="400">
 </figure>
  <ul>
-  <li style="padding-bottom:0.4em">60 sensors</li>
-  <li style="padding-bottom:0.4em">100 subjects at rest state</li>
-  <li style="padding-bottom:0.4em">Subjects self report craving scale</li>
+  <li style="padding-bottom:0.9em">60 sensors</li>
+  <li style="padding-bottom:0.9em">100 subjects at rest state</li>
+  <li style="padding-bottom:0.9em">Subjects self report craving scale</li>
 </ul> 
 </div>
 
@@ -346,10 +404,10 @@ accepting the uncertainty in $A_m$.
 <section>
 <h1> Output only modal analysis is well suited to the analysis of EEG waves</h1>
  <ul>
-  <li style="padding-bottom:0.4em">OMA (stochastic, zero mean)</li>
-  <li style="padding-bottom:0.4em">DMD (deterministic, full state)</li>
-  <li style="padding-bottom:0.4em">NeXT (deterministic, modal)</li>
-  <li style="padding-bottom:0.4em">N4SID (stochastic, Kalman states)</li>
+  <li style="padding-bottom:0.9em">OMA (stochastic, zero mean)</li>
+  <li style="padding-bottom:0.9em">DMD (deterministic, full state)</li>
+  <li style="padding-bottom:0.9em">NeXT (deterministic, modal)</li>
+  <li style="padding-bottom:0.9em">N4SID (stochastic, Kalman states)</li>
 </ul> 
 
 
@@ -620,14 +678,15 @@ $\begin{aligned}
 
 </div>
 <br>
+<blockquote>
 <h4> Common mode frequencies are aligned with the Rest State Network</h4>
  <ul>
-  <li style="padding-bottom:0.4em">Alpha Mode 1: `$4.34\pm 0.03$`</li>
-  <li style="padding-bottom:0.4em">Beta Mode 2: `$21.83 \pm 0.22$`</li>
-  <li style="padding-bottom:0.4em">Gamma Mode 3: `$40.39\pm 0.26$`</li>
-  <li style="padding-bottom:0.4em">Gamma Mode 4: `$44.19 \pm 0.24$`</li>
+  <li style="padding-bottom:0.9em">Alpha Mode 1: `$4.34\pm 0.03$`</li>
+  <li style="padding-bottom:0.9em">Beta Mode 2: `$21.83 \pm 0.22$`</li>
+  <li style="padding-bottom:0.9em">Gamma Mode 3: `$40.39\pm 0.26$`</li>
+  <li style="padding-bottom:0.9em">Gamma Mode 4: `$44.19 \pm 0.24$`</li>
 </ul> 
-
+</blockquote>
 </section>
 
 
@@ -817,13 +876,15 @@ $\begin{aligned}
 
 <div class="col">
 
-<dl>
-<dt>Three significant uncertainties</dt>
-  <dd>- Input $u$ is unknown, external, deterministic</dd>
-  <dd>- State matrix $A$ may have uncertainty</dd>
-  <dd>- General process uncertainty $v_x$</dd>
-<dt><strong><em>Can we synthesize $u$ and correct $A$?</em></strong></dt>
-</dl> 
+<ul style="font-size:1.5vw">
+<li style="padding-bottom:0.9em">Three significant uncertainties</li>
+<ul>
+  <li style="padding-bottom:0.9em"> Input $u$ is unknown, external, deterministic</li>
+  <li style="padding-bottom:0.9em"> State matrix $A$ may have uncertainty</li>
+  <li style="padding-bottom:0.9em"> General process uncertainty $v_x$</li>
+  </ul>
+<li ><strong><em>Can we synthesize $u$ and correct $A$?</em></strong></li>
+</ul> 
 </div>
 
 
@@ -865,14 +926,17 @@ $\begin{aligned}
 
 <div class="col">
 
-<dl>
-<dt>Approximate input space $\mathbb{U}$</dt>
-  <dd>- $\hat{u}=\sum_{i=1}^{N} c_i f_i(t)$</dd>
-<dt>Persisten Inputs</dt>
-  <dd>- $\dot{z}_u=F_u z_u$</dd>
-  <dd>- $\hat{u}=\Theta_u z_u$</dd>
-  <dd>- $F_u = \begin{bmatrix} 0 & 1 & 0 \\\ -\omega^2 & 0 & 0 \\\ 0 & 0 & 0 \end{bmatrix}$</dd>
-</dl> 
+<ul>
+<li style="padding-bottom:0.9em">Approximate input space $\mathbb{U}$</li>
+  <ul>
+  <li style="padding-bottom:0.9em">$\hat{u}=\sum_{i=1}^{N} c_i f_i(t)$</li></ul>
+<li style="padding-bottom:0.9em" style="padding-bottom:0.9em">Persistent Inputs</dt>
+<ul>
+  <li style="padding-bottom:0.9em">$\dot{z}_u=F_u z_u$</li>
+  <li style="padding-bottom:0.9em">$\hat{u}=\Theta_u z_u$</li>
+  <li style="padding-bottom:0.9em">$F_u = \begin{bmatrix} 0 & 1 & 0 \\\ -\omega^2 & 0 & 0 \\\ 0 & 0 & 0 \end{bmatrix}$</li>
+  </ul>
+</ul> 
 </div>
 
 
@@ -960,16 +1024,19 @@ Error dynamics
 
 <div class="col">
 
-<dl>
-<dt>ASD plant dynamics</dt>
-  <dd>`$A_c^* P + P A_c = -Q$`</dd>
-  <dd>`$PB=C^*$`</dd>
-<dt>Bounded `$L_{*}$`, $v$, and $\gamma_e$</dt>
-<dt>Error in state and input converges to an neighborood centered at zero</dt>
-  <dd>`$V(e,\Delta L) = \frac{1}{2} e^* \bar{P} e + \frac{1}{2} \text{tr}(\Delta L \gamma_e^{-1} \Delta L^*)$`</dd>
-  <dd><strong><em>`$\lim_{t \rightarrow \infty} \sup ||e(t)|| \leq \frac{1+\sqrt{\lambda_{\text{max}}\bar{P}}}{\alpha \sqrt{\lambda_{\text{min}}\bar{P}}} M_v \equiv R^*$`</em></strong></dd>
-</dl> 
-
+<ul>
+<li style="padding-bottom:0.9em">ASD plant dynamics</li>
+<ul>
+<li style="padding-bottom:0.9em">`$A_c^* P + P A_c = -Q$`</li>
+<li style="padding-bottom:0.9em">`$PB=C^*$`</li>
+</ul>
+<li style="padding-bottom:0.9em">Bounded `$L_{*}$`, $v$, and $\gamma_e$</li>
+<li style="padding-bottom:0.9em">Error in state and input converges to an neighborood centered at zero</li>
+<ul>
+<li style="padding-bottom:0.9em">`$V(e,\Delta L) = \frac{1}{2} e^* \bar{P} e + \frac{1}{2} \text{tr}(\Delta L \gamma_e^{-1} \Delta L^*)$`</li>
+<li style="padding-bottom:0.9em"><strong><em>`$\lim_{t \rightarrow \infty} \sup ||e(t)|| \leq \frac{1+\sqrt{\lambda_{\text{max}}\bar{P}}}{\alpha \sqrt{\lambda_{\text{min}}\bar{P}}} M_v \equiv R^*$`</em></strong></li>
+</ul>
+</ul>
 
 
 </div>
@@ -1165,11 +1232,11 @@ Recall: Solving the nonstationary problem
 
 <h1> Modeling assumptions </h1>
 
- <ul>
-  <li style="padding-bottom:0.4em">Unknown input acts evenly over spatial domain</li>
-  <li style="padding-bottom:0.4em">$F_u$ generates sine-cosine basis</li>
-  <li style="padding-bottom:0.4em">Static gains per LQR </li>
-  <li style="padding-bottom:0.4em"><strong><em>Unknown input is "external information"</em></strong></li>
+ <ul style="font-size:2vw">
+  <li style="padding-bottom:0.9em">Unknown input acts evenly over spatial domain</li>
+  <li style="padding-bottom:0.9em">$F_u$ generates sine-cosine basis</li>
+  <li style="padding-bottom:0.9em">Static gains per LQR </li>
+  <li style="padding-bottom:0.9em"><strong><em>Unknown input is "external information"</em></strong></li>
 </ul> 
 </section>
 
@@ -1245,9 +1312,9 @@ Recall: Solving the nonstationary problem
   <img src="img/defense/val_arou.jpg" alt="Trulli" height="400">
 </figure>
  <ul>
-  <li style="padding-bottom:0.4em">DEAP: Two self reported variables</li>
-  <li style="padding-bottom:0.4em">$F_u$ generates sine-cosine basis</li>
-  <li style="padding-bottom:0.4em">Static gains per LQR </li>
+  <li style="padding-bottom:0.9em">DEAP: Two self reported variables</li>
+  <li style="padding-bottom:0.9em">$F_u$ generates sine-cosine basis</li>
+  <li style="padding-bottom:0.9em">Static gains per LQR </li>
 </ul> 
 
 
@@ -1260,14 +1327,14 @@ Recall: Solving the nonstationary problem
   <img src="img/defense/classification_alg.png" alt="Trulli" height="300">
 </figure>
  <ul>
-  <li style="padding-bottom:0.4em">Hypothesis:</li>
+  <li style="padding-bottom:0.9em">Hypothesis:</li>
    <ul>
-  <li style="padding-bottom:0.4em">modes are correlated with human state/cognition, so</li>
-  <li style="padding-bottom:0.4em">same state should have similar modes, so</li>
-  <li style="padding-bottom:0.4em">you can take the average modes in a state,</li>
-  <li style="padding-bottom:0.4em">and the estimator will perform better than the other averaged model</li>
+  <li style="padding-bottom:0.9em">modes are correlated with human state/cognition, so</li>
+  <li style="padding-bottom:0.9em">same state should have similar modes, so</li>
+  <li style="padding-bottom:0.9em">you can take the average modes in a state,</li>
+  <li style="padding-bottom:0.9em">and the estimator will perform better than the other averaged model</li>
 </ul> 
-<li style="padding-bottom:0.4em"><strong><em>This is a interindividual approach</em></strong></li>
+<li style="padding-bottom:0.9em"><strong><em>This is a interindividual approach</em></strong></li>
 </ul> 
 
 
@@ -1282,9 +1349,9 @@ Recall: Solving the nonstationary problem
 <section>
 <h1> This method is comparable to state of the art deep learning approaches </h1>
 <ul>
-  <li style="padding-bottom:0.4em">Computational input and time is lower</li>
-  <li style="padding-bottom:0.4em"><strong><em>Analytical information is greater</em></strong></li>
-  <li style="padding-bottom:0.4em">Accuracy is comparable</li>
+  <li style="padding-bottom:0.9em">Computational input and time is lower</li>
+  <li style="padding-bottom:0.9em"><strong><em>Analytical information is greater</em></strong></li>
+  <li style="padding-bottom:0.9em">Accuracy is comparable</li>
 </ul> 
 <style>
 .vertical-center {
@@ -1338,14 +1405,14 @@ Recall: Solving the nonstationary problem
 ---
 # Contributions of this dissertation
 
- <ul>
-  <li style="padding-bottom:0.4em">Output only system identification techniques are suitable for linear models of brain wave dynamics via EEG around an operating state</li>
-  <li style="padding-bottom:0.4em">Real time spatio-temporal brain wave imaging via modal analysis</li>
-  <li style="padding-bottom:0.4em">A novel brain wave fingerprinting algorithm on par with state of the art deep learning approaches</li>
-  <li style="padding-bottom:0.4em">A complete body of adaptive, highly nonlinear unknown input estimator work</li>
-  <li style="padding-bottom:0.4em">Real time brain wave imaging that accounts for nonstationary, nonlinear dynamics by updating the modes in real time</li>
-  <li style="padding-bottom:0.4em">A novel recreation of the unknown brain wave plant's input</li>
-  <li style="padding-bottom:0.4em">Valence-arousal emotion classification from the DEAP database on par with cutting edge deep learning approaches </li>
+ <ul style="font-size:1.7vw">
+  <li style="padding-bottom:0.9em">Output only system identification techniques are suitable for linear models of brain wave dynamics via EEG around an operating state</li>
+  <li style="padding-bottom:0.9em">Real time spatio-temporal brain wave imaging via modal analysis</li>
+  <li style="padding-bottom:0.9em">A novel brain wave fingerprinting algorithm on par with state of the art deep learning approaches</li>
+  <li style="padding-bottom:0.9em">A complete body of adaptive, highly nonlinear unknown input estimator work</li>
+  <li style="padding-bottom:0.9em">Real time brain wave imaging that accounts for nonstationary, nonlinear dynamics by updating the modes in real time</li>
+  <li style="padding-bottom:0.9em">A novel recreation of the unknown brain wave plant's input</li>
+  <li style="padding-bottom:0.9em">Valence-arousal emotion classification from the DEAP database on par with cutting edge deep learning approaches </li>
 </ul> 
 
 
@@ -1353,14 +1420,14 @@ Recall: Solving the nonstationary problem
 
 # List of technical works
 
- <ul>
-  <li style="padding-bottom:0.4em"><strong>T. Griffith</strong>, J.E. Hubbard. System identification methods for dynamic models of brain activity. <em>Biomedical Signal Processing and Control</em> </li>
-  <li style="padding-bottom:0.4em"><strong>T. Griffith</strong>, M. J. Balas. An Adaptive Control Framework for Unknown Input Estimation. <em>ASME IMECE 2021 Proceedings</em> </li>
-  <li style="padding-bottom:0.4em"><strong>T. Griffith</strong>, V.P. Gehlot, M. J. Balas. Robust Adaptive Unknown Input Estimation with Uncertain System Realization. <em>AIAA SciTech 2022 Forum</em> </li>
-  <li style="padding-bottom:0.4em"><strong>T. Griffith</strong>, V.P. Gehlot, M. J. Balas. Adaptive Estimation of Unknown Inputs with Weakly Nonlinear Dynamics. <em>ACC 2022</em> [Accepted] </li>
-  <li style="padding-bottom:0.4em"><strong>T. Griffith</strong>, V.P. Gehlot, M. J. Balas. On the Observability of Quantum Dynamical Systems. <em>ASME IMECE 2022 Proceedings</em> [Accepted] </li>
-  <li style="padding-bottom:0.4em"><strong>T. Griffith</strong>, V.P. Gehlot, M. J. Balas, J.E. Hubbard. An Adaptive Approach to Real Time EEG Estimation. <em>Biomedical Signal Processing and Control</em> [In-Review] </li>
-  <li style="padding-bottom:0.4em"><strong>T. Griffith</strong>, J.E. Hubbard. System Identification of Brain Wave Modes Using EEG. <em>Journal of Neural Engineering</em> [In-Revision] </li>
+ <ul style="font-size:1.7vw">
+  <li style="padding-bottom:0.9em"><strong>T. Griffith</strong>, J.E. Hubbard. System identification methods for dynamic models of brain activity. <em>Biomedical Signal Processing and Control</em> </li>
+  <li style="padding-bottom:0.9em"><strong>T. Griffith</strong>, M. J. Balas. An Adaptive Control Framework for Unknown Input Estimation. <em>ASME IMECE 2021 Proceedings</em> </li>
+  <li style="padding-bottom:0.9em"><strong>T. Griffith</strong>, V.P. Gehlot, M. J. Balas. Robust Adaptive Unknown Input Estimation with Uncertain System Realization. <em>AIAA SciTech 2022 Forum</em> </li>
+  <li style="padding-bottom:0.9em"><strong>T. Griffith</strong>, V.P. Gehlot, M. J. Balas. Adaptive Estimation of Unknown Inputs with Weakly Nonlinear Dynamics. <em>ACC 2022</em> [Accepted] </li>
+  <li style="padding-bottom:0.9em"><strong>T. Griffith</strong>, V.P. Gehlot, M. J. Balas. On the Observability of Quantum Dynamical Systems. <em>ASME IMECE 2022 Proceedings</em> [Accepted] </li>
+  <li style="padding-bottom:0.9em"><strong>T. Griffith</strong>, V.P. Gehlot, M. J. Balas, J.E. Hubbard. An Adaptive Approach to Real Time EEG Estimation. <em>Biomedical Signal Processing and Control</em> [In-Review] </li>
+  <li style="padding-bottom:0.9em"><strong>T. Griffith</strong>, J.E. Hubbard. System Identification of Brain Wave Modes Using EEG. <em>Journal of Neural Engineering</em> [In-Revision] </li>
 </ul> 
 
 
@@ -1370,15 +1437,25 @@ Recall: Solving the nonstationary problem
 
 # Future work
 
-- Multiple data types
-- Improved analysis and classification
-- Probablistic considerations
+ <ul style="font-size:1.7vw">
+  <li style="padding-bottom:0.9em">Multiple data types</li>
+  <li style="padding-bottom:0.9em">Improved analysis and classification</li>
+  <li style="padding-bottom:0.9em">Probablistic considerations</li>
+</ul> 
+
 
 ---
 
 <!-- .slide: data-background="#003C71" class="dark" -->
 
-# Acknowledgements
+
+<h3> Every day is a new day. It is better to be lucky. </h3>
+<h2> ***But I would rather be exact.*** </h2>
+<h3> Then when luck comes </h3>
+<h2> ***you are ready.*** </h2>
+<br>
+<div style="text-align: right"> <small>- The Old Man and the Sea</small></div>
+
 
 ---
 
@@ -1506,6 +1583,7 @@ Recall: Solving the nonstationary problem
   <li> Prof. Joanna Tsenn </li>
   <li> Kaustubh Mahesh Tangsali</li>
   <li> Briana Holton </li>
+  <li> Khari Harrison </li>
   <li> Bryton Praslicka </li>
   <li>Robert Trépanier</li>
   <li>Harold Gamarro</li>
@@ -1519,6 +1597,9 @@ Recall: Solving the nonstationary problem
 # A Modal Approach to the Space Time Dynamics of Cognitive Biomarkers
 
 > The willow submits to the wind and prospers until one day it is many willows - a wall against the wind.
+
+<br>
+<div style="text-align: right"> <small>- Dune</small></div>
 
 ---
 
