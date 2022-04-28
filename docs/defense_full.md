@@ -357,7 +357,7 @@ accepting the uncertainty in $A_m$.
 
 <div class="col">
 
-<h2> Neuropsychoimaging of Addiction and Related Conditions Dataset </h2>
+<h2> NARC: Neuropsychoimaging of Addiction and Related Conditions Dataset </h2>
 <figure>
   <img src="https://www.ncbi.nlm.nih.gov/pmc/articles/instance/3463641/bin/nihms-386132-f0003.jpg" alt="Trulli" height="400">
 </figure>
@@ -377,7 +377,7 @@ accepting the uncertainty in $A_m$.
 </section>
 
 <section>
-<h1> Output only modal analysis is well suited to the analysis of EEG waves</h1>
+<h1> Output only modal analysis is well suited to EEG waves</h1>
  <ul>
   <li style="padding-bottom:0.9em">OMA (stochastic, zero mean)</li>
   <li style="padding-bottom:0.9em">DMD (deterministic, full state)</li>
@@ -1114,6 +1114,48 @@ y&=Cx
 Recall: Solving the nonstationary problem
 
 ---
+
+<section>
+<h1> Brain wave modes poorly match nonlinear dynamics </h1>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+<figure>
+  <img src="img/defense/superposemodes.gif" alt="Trulli" height="600">
+</figure>
+<figcaption> Superposed modes recreate the data they came from. </figcaption>
+</div>
+
+
+
+<div class="col">
+
+<figure>
+  <img src="img/defense/bad_modes.gif" alt="Trulli" height="600">
+  <figcaption> Superposed modes do not match unseen data well. An adaptive update is needed. </figcaption>
+</figure>
+
+
+
+</div>
+</section>
 
 <section>
 <h1> aUIO outperforms static modes </h1>
