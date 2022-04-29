@@ -1116,48 +1116,6 @@ Recall: Solving the nonstationary problem
 ---
 
 <section>
-<h1> Brain wave modes poorly match nonlinear dynamics </h1>
-<style>
-.vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
-
-  display: flex;
-  align-items: center;
-}
-
-.container{
-    display: flex;
-}
-.col{
-    flex: 1;
-}
-</style>
-
-<div class="container vertical-center">
-
-<div class="col">
-<figure>
-  <img src="img/defense/superposemodes.gif" alt="Trulli" height="600">
-</figure>
-<figcaption> Superposed modes recreate the data they came from. </figcaption>
-</div>
-
-
-
-<div class="col">
-
-<figure>
-  <img src="img/defense/bad_modes.gif" alt="Trulli" height="600">
-  <figcaption> Superposed modes do not match unseen data well. An adaptive update is needed. </figcaption>
-</figure>
-
-
-
-</div>
-</section>
-
-<section>
 <h1> aUIO outperforms static modes </h1>
 <style>
 .vertical-center {
@@ -1183,7 +1141,7 @@ Recall: Solving the nonstationary problem
 <h3> aUIO on unseen data </h3>
 <figure>
   <img src="img/defense/square_L.gif" alt="Trulli" height="650">
-    <figcaption> Adaptive input estimator performance when the modes are from a different trial. </figcaption>
+    <figcaption> Adaptive input estimator performance for the  unseen data. </figcaption>
 </figure>
 </div>
 
@@ -1191,11 +1149,12 @@ Recall: Solving the nonstationary problem
 
 <div class="col">
 
-<h3> Weighted modes on seen data </h3>
+<h3> Weighted modes on unseen data </h3>
 <figure>
-  <img src="img/defense/square_noL.gif" alt="Trulli" height="650">
-  <figcaption> Superposition of modes decomposed from this data. </figcaption>
+  <img src="img/defense/bad_modes.gif" alt="Trulli" height="600">
+  <figcaption> Superposed modes do not match unseen data well. An adaptive update is needed. </figcaption>
 </figure>
+
 
 
 
