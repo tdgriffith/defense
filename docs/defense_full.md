@@ -1149,10 +1149,10 @@ Recall: Solving the nonstationary problem
 
 <div class="col">
 
-<h3> Weighted modes on unseen data </h3>
+<h3> Weighted modes on seen data </h3>
 <figure>
-  <img src="img/defense/bad_modes.gif" alt="Trulli" height="600">
-  <figcaption> Superposed modes do not match unseen data well. An adaptive update is needed. </figcaption>
+  <img src="img/defense/square_noL.gif" alt="Trulli" height="650">
+  <figcaption> Superposition of modes decomposed from this data. </figcaption>
 </figure>
 
 
