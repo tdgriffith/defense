@@ -444,7 +444,7 @@ $\begin{aligned}
 
 <div class="col">
 <figure>
-  <img src="img/defense/truncate_ex3.png" alt="Trulli" height="500">
+  <img src="img/defense/truncate_ex4.png" alt="Trulli" height="500">
   <figcaption>The singular values (i.e. importance) of each mode rolls off after 50 modes.</figcaption>
 </figure>
 </div>
