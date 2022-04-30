@@ -1,5 +1,5 @@
 # Defense repo
-Slides for oral portion of my defense. 
+Slides for oral portion of my defense. Admittedly, the complexity of the slides got away from me a little, so the markdown is a bit of a mess.  
 
 https://tdgriffith.github.io/defense/
 
