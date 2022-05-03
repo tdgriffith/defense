@@ -651,7 +651,7 @@ $\begin{aligned}
 <div class="col">
 
 <figure>
-  <img src="img/common1.gif" alt="Trial 5, Averaged" style="height:400px;">
+  <img src="img/common2.gif" alt="Trial 5, Averaged" style="height:400px;">
   <figcaption class="description"> Alpha Mode 1 from Subject 19, ***Trial 20*** in the DEAP database. </figcaption>
 </figure>
 
